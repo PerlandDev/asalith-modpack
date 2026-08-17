@@ -3,208 +3,591 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Asalith — Modpack</title>
-<meta name="description" content="Modpack oficial del servidor Asalith. Minecraft 1.20.1 con Forge.">
+<title>Asalith Fields — Modpack oficial</title>
+<meta name="description" content="Modpack oficial del servidor Asalith. Minecraft 1.20.1 con Forge. Instalación para Modrinth App, Prism Launcher y TLauncher.">
+<meta name="theme-color" content="#1b2417">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://perlanddev.github.io/asalith-modpack/">
+<meta property="og:title" content="Asalith Fields — Modpack oficial">
+<meta property="og:description" content="Minecraft 1.20.1 con Forge. Descarga el .mrpack e instálalo en Modrinth App, Prism Launcher o TLauncher.">
+<meta property="og:image" content="https://perlanddev.github.io/asalith-modpack/assets/og-asalith.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-  :root {
-    --bg: #0f1115;
-    --panel: #171a21;
-    --border: #262b36;
-    --text: #e6e9ef;
-    --muted: #99a1b3;
-    --accent: #7aa2f7;
-    --accent-soft: rgba(122, 162, 247, .12);
-    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  }
-  .envoltorio { max-width: 900px; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
-  header { border-bottom: 1px solid var(--border); padding-bottom: 2rem; margin-bottom: 2.5rem; }
-  h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); margin: 0 0 .4rem; letter-spacing: -.02em; }
-  .subtitulo { color: var(--muted); margin: 0 0 1.25rem; font-size: 1.05rem; }
-  .etiquetas { display: flex; flex-wrap: wrap; gap: .5rem; }
-  .etiqueta {
-    background: var(--accent-soft); color: var(--accent);
-    border: 1px solid rgba(122,162,247,.25);
-    padding: .2rem .65rem; border-radius: 999px; font-size: .82rem; font-weight: 600;
-  }
-  h2 { font-size: 1.35rem; margin: 2.5rem 0 .9rem; letter-spacing: -.01em; }
-  h3 { font-size: 1rem; margin: 1.5rem 0 .5rem; color: var(--muted); font-weight: 600; }
-  p { color: #cbd2e0; }
-  a { color: var(--accent); }
-  ol, ul { color: #cbd2e0; padding-left: 1.3rem; }
-  li { margin: .4rem 0; }
-  code {
-    font-family: var(--mono); font-size: .88em;
-    background: #1e222b; border: 1px solid var(--border);
-    padding: .12em .4em; border-radius: 5px;
-  }
-  .bloque {
-    position: relative; background: var(--panel); border: 1px solid var(--border);
-    border-radius: 10px; padding: 1rem 1.1rem; overflow-x: auto;
-  }
-  .bloque code { background: none; border: none; padding: 0; white-space: pre; }
-  .copiar {
-    position: absolute; top: .55rem; right: .55rem;
-    background: #232834; color: var(--muted); border: 1px solid var(--border);
-    border-radius: 6px; padding: .25rem .6rem; font-size: .78rem; cursor: pointer;
-  }
-  .copiar:hover { color: var(--text); border-color: var(--accent); }
-  table { width: 100%; border-collapse: collapse; margin-top: .75rem; font-size: .92rem; }
-  th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid var(--border); }
-  th { color: var(--muted); font-weight: 600; font-size: .82rem; text-transform: uppercase; letter-spacing: .04em; }
-  .tabla-envoltorio { overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; }
-  .lado { color: var(--muted); font-size: .82rem; }
-  footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: .88rem; }
-  @media (prefers-color-scheme: light) {
-    :root {
-      --bg: #ffffff; --panel: #f6f7f9; --border: #e2e5ea;
-      --text: #14171f; --muted: #5b6474; --accent: #2f5fd0;
-      --accent-soft: rgba(47,95,208,.09);
-    }
-    p, ol, ul { color: #333a48; }
-    code { background: #eef0f4; }
-    .copiar { background: #e9ecf1; }
-  }
+:root {
+  --bosque-hondo: oklch(0.235 0.028 141);
+  --bosque:       oklch(0.295 0.032 141);
+  --bosque-alto:  oklch(0.375 0.035 141);
+  --crema:        oklch(0.945 0.022 85);
+  --crema-tenue:  oklch(0.825 0.028 80);
+  --sol:          oklch(0.735 0.155 58);
+  --brasa:        oklch(0.665 0.145 42);
+  --rosa:         oklch(0.795 0.075 28);
+  --tierra:       oklch(0.505 0.155 30);
+
+  --display: 'Archivo Black', 'Arial Black', system-ui, sans-serif;
+  --texto: 'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --salida: cubic-bezier(0.22, 1, 0.36, 1);
+  --z-cabecera: 100;
+
+  --ancho: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bosque-hondo);
+  color: var(--crema);
+  font-family: var(--texto);
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.075rem);
+  line-height: 1.68;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.06; letter-spacing: -0.02em; text-wrap: balance; }
+p { text-wrap: pretty; }
+a { color: var(--sol); }
+a:hover { color: var(--rosa); }
+
+:focus-visible { outline: 3px solid var(--sol); outline-offset: 3px; border-radius: 4px; }
+
+.contenedor { width: 100%; max-width: var(--ancho); margin-inline: auto; padding-inline: clamp(1.1rem, 4vw, 2rem); }
+.oculto-visual {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* ---------- Portada ---------- */
+
+.portada {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(3rem, 9vw, 6rem) clamp(3.5rem, 10vw, 7rem);
+  text-align: center;
+  border-bottom: 1px solid var(--bosque-alto);
+}
+
+/* Los arcos del atardecer del logotipo, continuados en la página. */
+.portada::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: clamp(-10rem, -16vw, -5rem);
+  width: min(190vw, 1700px);
+  aspect-ratio: 1;
+  translate: -50% 0;
+  background: repeating-radial-gradient(
+    circle at 50% 62%,
+    oklch(0.735 0.155 58 / 0.11) 0 3.6%,
+    transparent 3.6% 7.6%
+  );
+  mask-image: radial-gradient(circle at 50% 62%, #000 34%, transparent 68%);
+  pointer-events: none;
+}
+
+.portada > * { position: relative; }
+
+.insignia {
+  width: min(340px, 62vw);
+  height: auto;
+  display: block;
+  margin-inline: auto;
+  filter: drop-shadow(0 18px 44px oklch(0.15 0.02 141 / 0.6));
+}
+
+.portada h1 { margin: 0; }
+
+.lema {
+  margin: clamp(1.6rem, 4vw, 2.4rem) auto 0;
+  max-width: 34ch;
+  font-size: clamp(1.15rem, 1rem + 0.8vw, 1.5rem);
+  line-height: 1.45;
+  color: var(--crema);
+}
+
+.datos {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 0.7rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+}
+.dato {
+  padding: 0.28rem 0.8rem;
+  border: 1px solid var(--bosque-alto);
+  border-radius: 999px;
+  color: var(--crema-tenue);
+}
+.dato strong { color: var(--crema); font-weight: 600; }
+.dato.estado { border-color: oklch(0.505 0.155 30 / 0.9); color: var(--rosa); }
+
+.acciones { display: flex; flex-wrap: wrap; gap: 0.85rem; justify-content: center; margin-top: clamp(1.8rem, 4vw, 2.5rem); }
+
+.boton {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  padding: 0.82rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: translate 0.25s var(--salida), background-color 0.25s var(--salida), border-color 0.25s var(--salida);
+}
+.boton:hover { translate: 0 -2px; }
+.boton-principal { background: var(--sol); color: oklch(0.2 0.03 60); }
+.boton-principal:hover { background: var(--rosa); color: oklch(0.2 0.03 60); }
+.boton-secundario { border-color: var(--bosque-alto); color: var(--crema); }
+.boton-secundario:hover { border-color: var(--sol); color: var(--crema); background: oklch(0.735 0.155 58 / 0.08); }
+
+/* ---------- Secciones ---------- */
+
+section.bloque { padding-block: clamp(3rem, 8vw, 5.5rem); }
+section.bloque + section.bloque { border-top: 1px solid var(--bosque-alto); }
+
+h2 { font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.6rem); margin: 0 0 0.6rem; }
+.entradilla { color: var(--crema-tenue); max-width: 60ch; margin: 0 0 clamp(1.8rem, 4vw, 2.6rem); }
+
+/* Requisitos: filas con separadores, no tarjetas. */
+.requisitos { display: grid; gap: 0; margin: 0; }
+.requisito {
+  display: grid;
+  grid-template-columns: minmax(9rem, 15rem) 1fr;
+  gap: 0.4rem 2rem;
+  padding-block: 1.05rem;
+  border-top: 1px solid var(--bosque-alto);
+  align-items: baseline;
+}
+.requisito:last-child { border-bottom: 1px solid var(--bosque-alto); }
+.requisito dt { font-family: var(--display); font-size: 0.95rem; color: var(--sol); }
+.requisito dd { margin: 0; color: var(--crema-tenue); }
+.requisito dd strong { color: var(--crema); font-weight: 600; }
+@media (max-width: 34rem) { .requisito { grid-template-columns: 1fr; } }
+
+/* ---------- Pestañas de instalación ---------- */
+
+.pestanas {
+  display: flex; flex-wrap: wrap; gap: 0.4rem;
+  border-bottom: 1px solid var(--bosque-alto);
+  margin-bottom: clamp(1.8rem, 4vw, 2.4rem);
+}
+.pestana {
+  appearance: none; background: none; border: 0;
+  border-bottom: 3px solid transparent;
+  color: var(--crema-tenue);
+  font-family: var(--texto); font-size: 1rem; font-weight: 600;
+  padding: 0.75rem 1.05rem; cursor: pointer;
+  transition: color 0.2s var(--salida), border-color 0.2s var(--salida);
+}
+.pestana:hover { color: var(--crema); }
+.pestana[aria-selected="true"] { color: var(--sol); border-bottom-color: var(--sol); }
+.pestana .marca { display: block; font-size: 0.74rem; font-weight: 500; color: var(--crema-tenue); letter-spacing: 0.02em; }
+.pestana[aria-selected="true"] .marca { color: var(--rosa); }
+
+.panel[hidden] { display: none; }
+.panel { animation: aparecer 0.4s var(--salida) both; }
+@keyframes aparecer { from { opacity: 0; translate: 0 8px; } to { opacity: 1; translate: 0 0; } }
+
+.aviso {
+  margin: 0 0 1.6rem;
+  padding: 0.95rem 1.15rem;
+  border: 1px solid var(--bosque-alto);
+  border-radius: 8px;
+  background: var(--bosque);
+  color: var(--crema-tenue);
+  font-size: 0.95rem;
+}
+.aviso strong { color: var(--crema); font-weight: 600; }
+
+.pasos { counter-reset: paso; list-style: none; padding: 0; margin: 0; max-width: 68ch; }
+.pasos > li {
+  counter-increment: paso;
+  position: relative;
+  padding-left: 3.1rem;
+  padding-bottom: 1.5rem;
+}
+.pasos > li::before {
+  content: counter(paso);
+  position: absolute; left: 0; top: -0.1rem;
+  width: 2.1rem; height: 2.1rem;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--bosque);
+  border: 1px solid var(--bosque-alto);
+  color: var(--sol);
+  font-family: var(--display); font-size: 0.9rem;
+}
+.pasos > li:last-child { padding-bottom: 0; }
+.pasos strong { color: var(--crema); font-weight: 700; }
+.pasos .detalle { display: block; color: var(--crema-tenue); font-size: 0.94rem; margin-top: 0.15rem; }
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  background: var(--bosque);
+  border: 1px solid var(--bosque-alto);
+  padding: 0.1em 0.42em;
+  border-radius: 5px;
+  overflow-wrap: anywhere;
+}
+
+.ruta {
+  position: relative;
+  display: flex; align-items: center; gap: 0.75rem;
+  background: var(--bosque);
+  border: 1px solid var(--bosque-alto);
+  border-radius: 8px;
+  padding: 0.7rem 0.75rem 0.7rem 1rem;
+  margin-top: 0.7rem;
+  max-width: 60ch;
+}
+.ruta code { background: none; border: 0; padding: 0; flex: 1; overflow-x: auto; white-space: nowrap; }
+.copiar {
+  flex-shrink: 0;
+  background: var(--bosque-alto); color: var(--crema);
+  border: 0; border-radius: 6px;
+  padding: 0.3rem 0.7rem; font-size: 0.8rem; font-weight: 600;
+  font-family: var(--texto); cursor: pointer;
+}
+.copiar:hover { background: var(--sol); color: oklch(0.2 0.03 60); }
+
+/* ---------- Lista de mods ---------- */
+
+.tabla-envoltorio { overflow-x: auto; border: 1px solid var(--bosque-alto); border-radius: 10px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+th, td { text-align: left; padding: 0.7rem 1rem; border-bottom: 1px solid var(--bosque-alto); }
+th { font-family: var(--display); font-size: 0.78rem; color: var(--sol); letter-spacing: 0.03em; }
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:hover { background: oklch(0.735 0.155 58 / 0.05); }
+td.menor { color: var(--crema-tenue); font-size: 0.88rem; white-space: nowrap; }
+
+/* ---------- Pie ---------- */
+
+footer {
+  border-top: 1px solid var(--bosque-alto);
+  padding-block: clamp(2.5rem, 6vw, 4rem);
+  color: var(--crema-tenue);
+  font-size: 0.92rem;
+}
+.pie-rejilla { display: flex; flex-wrap: wrap; gap: 2rem 3rem; justify-content: space-between; align-items: start; }
+footer h3 { font-size: 0.95rem; margin: 0 0 0.5rem; color: var(--crema); }
+footer p { margin: 0.25rem 0; }
+
+/* ---------- Entrada ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .anima { animation: entrar 0.85s var(--salida) both; }
+  .anima:nth-child(2) { animation-delay: 0.1s; }
+  .anima:nth-child(3) { animation-delay: 0.18s; }
+  .anima:nth-child(4) { animation-delay: 0.26s; }
+  @keyframes entrar { from { opacity: 0; translate: 0 18px; } to { opacity: 1; translate: 0 0; } }
+  .insignia { animation: surgir 1.1s var(--salida) both; }
+  @keyframes surgir { from { opacity: 0; scale: 0.9; } to { opacity: 1; scale: 1; } }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .panel { animation: none; }
+  .boton:hover { translate: none; }
+}
 </style>
 </head>
 <body>
-<div class="envoltorio">
 
-<header>
-  <h1>Asalith</h1>
-  <p class="subtitulo">Modpack oficial del servidor Asalith.</p>
-  <div class="etiquetas" id="etiquetas">
-    <span class="etiqueta">Minecraft 1.20.1</span>
-    <span class="etiqueta">Forge</span>
+<header class="portada">
+  <div class="contenedor">
+    <h1><img class="insignia" src="assets/asalith-badge.svg" width="520" height="520" alt="Asalith Fields"></h1>
+
+    <p class="lema anima">El modpack oficial del servidor <strong>Asalith</strong>. Un solo archivo, tres formas de instalarlo.</p>
+
+    <div class="datos anima">
+      <span class="dato">Minecraft <strong id="dato-mc">1.20.1</strong></span>
+      <span class="dato">Forge <strong id="dato-forge">47.4.22</strong></span>
+      <span class="dato estado" id="dato-version">v1.0.0-alpha · en preparación</span>
+    </div>
+
+    <div class="acciones anima">
+      <a class="boton boton-principal" href="https://github.com/PerlandDev/asalith-modpack/releases">Descargar el .mrpack</a>
+      <a class="boton boton-secundario" href="#instalacion">Cómo se instala</a>
+    </div>
   </div>
 </header>
 
-<h2>Instalación</h2>
-<p>
-  El modpack se instala y se actualiza solo mediante <strong>packwiz</strong>. Recomendamos
-  <a href="https://prismlauncher.org/" target="_blank" rel="noopener">Prism Launcher</a>.
-</p>
+<main>
 
-<ol>
-  <li>Crea una instancia de <strong>Minecraft 1.20.1</strong> con <strong>Forge</strong>.</li>
-  <li>Abre <em>Editar instancia → Configuración → Ajustes de Java</em> y pega esto al final de los argumentos personalizados:</li>
-</ol>
+<section class="bloque contenedor" id="requisitos">
+  <h2>Antes de empezar</h2>
+  <p class="entradilla">Comprueba estos cuatro puntos. La mayoría de los problemas al entrar al servidor vienen de aquí.</p>
 
-<div class="bloque">
-  <button class="copiar" data-copiar="cmd-bootstrap">Copiar</button>
-  <code id="cmd-bootstrap">-jar packwiz-installer-bootstrap.jar https://perlanddev.github.io/asalith-modpack/pack.toml</code>
-</div>
+  <dl class="requisitos">
+    <div class="requisito">
+      <dt>Versión</dt>
+      <dd>Minecraft <strong>1.20.1</strong> con <strong>Forge 47.4.22</strong>. Otra versión no podrá conectarse.</dd>
+    </div>
+    <div class="requisito">
+      <dt>Java</dt>
+      <dd><strong>Java 17</strong> o superior. Los lanzadores modernos lo instalan solos; si usas TLauncher, puede que tengas que instalarlo a mano.</dd>
+    </div>
+    <div class="requisito">
+      <dt>Memoria</dt>
+      <dd>Reserva entre <strong>4 y 6 GB</strong> de RAM al juego. Con menos de 4 GB el pack va a tirones.</dd>
+    </div>
+    <div class="requisito">
+      <dt>Cuenta</dt>
+      <dd>Necesitas una cuenta de Minecraft para jugar en línea. El modpack en sí es gratuito.</dd>
+    </div>
+  </dl>
+</section>
 
-<ol start="3">
-  <li>
-    Descarga
-    <a href="https://github.com/packwiz/packwiz-installer-bootstrap/releases/latest" target="_blank" rel="noopener">packwiz-installer-bootstrap.jar</a>
-    y colócalo en la carpeta <code>.minecraft</code> de la instancia.
-  </li>
-  <li>Inicia el juego. Cada vez que arranques, el modpack se actualizará automáticamente.</li>
-</ol>
+<section class="bloque contenedor" id="instalacion">
+  <h2>Instalación</h2>
+  <p class="entradilla">Elige tu lanzador. Todos parten del mismo archivo: descarga el <code>.mrpack</code> desde la sección de releases y sigue los pasos.</p>
 
-<h3>Alternativa: importar el .mrpack</h3>
-<p>
-  Si prefieres una instalación puntual sin actualizaciones automáticas, descarga el
-  <code>.mrpack</code> de la
-  <a href="https://github.com/PerlandDev/asalith-modpack/releases/latest" target="_blank" rel="noopener">última release</a>
-  e impórtalo en Prism Launcher o en la app de Modrinth.
-</p>
+  <div class="pestanas" role="tablist" aria-label="Lanzadores">
+    <button class="pestana" role="tab" id="tab-modrinth" aria-controls="panel-modrinth" aria-selected="true">
+      Modrinth App <span class="marca">Recomendado</span>
+    </button>
+    <button class="pestana" role="tab" id="tab-prism" aria-controls="panel-prism" aria-selected="false" tabindex="-1">
+      Prism Launcher <span class="marca">Para trastear</span>
+    </button>
+    <button class="pestana" role="tab" id="tab-tlauncher" aria-controls="panel-tlauncher" aria-selected="false" tabindex="-1">
+      TLauncher <span class="marca">Manual</span>
+    </button>
+  </div>
 
-<h2>Lista de mods <span id="contador" class="lado"></span></h2>
-<div class="tabla-envoltorio">
-  <table>
-    <thead>
-      <tr><th>Nombre</th><th>Tipo</th><th>Lado</th></tr>
-    </thead>
-    <tbody id="lista-mods">
-      <tr><td colspan="3" class="lado">Cargando…</td></tr>
-    </tbody>
-  </table>
-</div>
+  <div class="panel" role="tabpanel" id="panel-modrinth" aria-labelledby="tab-modrinth" tabindex="0">
+    <p class="aviso">Es la vía más corta: la app entiende el archivo <code>.mrpack</code> directamente y se encarga de bajar Forge y los mods por ti.</p>
+    <ol class="pasos">
+      <li>
+        <strong>Instala la app de Modrinth.</strong>
+        <span class="detalle">Descárgala desde <a href="https://modrinth.com/app" target="_blank" rel="noopener">modrinth.com/app</a>. Hay versión para Windows, macOS y Linux.</span>
+      </li>
+      <li>
+        <strong>Descarga el archivo del modpack.</strong>
+        <span class="detalle">Coge <code>Asalith.mrpack</code> de la <a href="https://github.com/PerlandDev/asalith-modpack/releases" target="_blank" rel="noopener">sección de releases</a>. Guárdalo donde lo encuentres luego, por ejemplo en Descargas.</span>
+      </li>
+      <li>
+        <strong>Impórtalo en la app.</strong>
+        <span class="detalle">Abre la app, pulsa el botón <strong>+</strong> de la barra lateral izquierda y elige <strong>«Import from file»</strong> (importar desde archivo). Selecciona el <code>.mrpack</code> que acabas de bajar.</span>
+      </li>
+      <li>
+        <strong>Espera a que termine la descarga.</strong>
+        <span class="detalle">La app baja Forge y todos los mods sola. Tarda unos minutos la primera vez, según tu conexión.</span>
+      </li>
+      <li>
+        <strong>Ajusta la memoria.</strong>
+        <span class="detalle">Entra en los ajustes de la instancia, apartado <strong>Java</strong>, y sube la memoria asignada a 4–6 GB.</span>
+      </li>
+      <li>
+        <strong>Inicia sesión y juega.</strong>
+        <span class="detalle">Añade tu cuenta de Microsoft y pulsa jugar. Para actualizar el pack más adelante, descarga el <code>.mrpack</code> nuevo y vuelve a importarlo.</span>
+      </li>
+    </ol>
+  </div>
+
+  <div class="panel" role="tabpanel" id="panel-prism" aria-labelledby="tab-prism" tabindex="0">
+    <p class="aviso">Prism también admite <code>.mrpack</code> de forma nativa. Es la opción cómoda si ya gestionas varias instancias o quieres tocar mods a mano.</p>
+    <ol class="pasos">
+      <li>
+        <strong>Instala Prism Launcher.</strong>
+        <span class="detalle">Descárgalo desde <a href="https://prismlauncher.org/" target="_blank" rel="noopener">prismlauncher.org</a> y complétalo con tu cuenta de Microsoft.</span>
+      </li>
+      <li>
+        <strong>Descarga el archivo del modpack.</strong>
+        <span class="detalle">Coge <code>Asalith.mrpack</code> de la <a href="https://github.com/PerlandDev/asalith-modpack/releases" target="_blank" rel="noopener">sección de releases</a>.</span>
+      </li>
+      <li>
+        <strong>Crea la instancia importándolo.</strong>
+        <span class="detalle">Pulsa <strong>«Añadir instancia»</strong>, ve a la pestaña <strong>«Importar»</strong>, elige <strong>«Explorar»</strong> y selecciona el archivo <code>.mrpack</code>. Ponle el nombre que quieras.</span>
+      </li>
+      <li>
+        <strong>Deja que descargue los mods.</strong>
+        <span class="detalle">Prism instala Forge 47.4.22 y todos los mods automáticamente al crear la instancia.</span>
+      </li>
+      <li>
+        <strong>Sube la memoria.</strong>
+        <span class="detalle">Clic derecho en la instancia → <strong>Editar</strong> → <strong>Ajustes</strong> → <strong>Java</strong>. Marca la casilla de memoria y pon 4096–6144 MB como máximo.</span>
+      </li>
+      <li>
+        <strong>Juega.</strong>
+        <span class="detalle">Para actualizar, importa el <code>.mrpack</code> nuevo como instancia aparte y borra la vieja cuando compruebes que todo funciona.</span>
+      </li>
+    </ol>
+  </div>
+
+  <div class="panel" role="tabpanel" id="panel-tlauncher" aria-labelledby="tab-tlauncher" tabindex="0">
+    <p class="aviso"><strong>TLauncher no admite archivos <code>.mrpack</code>.</strong> Para este lanzador publicamos un ZIP con los mods ya descargados, que se copia a mano. No hay actualizaciones automáticas: cada vez que cambie el pack habrá que repetir estos pasos.</p>
+    <ol class="pasos">
+      <li>
+        <strong>Instala Forge 1.20.1 desde TLauncher.</strong>
+        <span class="detalle">En la lista de versiones busca <strong>Forge 1.20.1</strong> (build 47.4.22). Selecciónala y entra al juego una vez para que se creen las carpetas. Luego cierra Minecraft.</span>
+      </li>
+      <li>
+        <strong>Abre la carpeta del juego.</strong>
+        <span class="detalle">Pulsa <code>Win + R</code>, escribe la ruta de abajo y acepta. En macOS está en <code>~/Library/Application Support/minecraft</code>.</span>
+        <span class="ruta"><code id="ruta-minecraft">%appdata%\.minecraft</code><button class="copiar" data-copiar="ruta-minecraft">Copiar</button></span>
+      </li>
+      <li>
+        <strong>Descarga el ZIP de instalación manual.</strong>
+        <span class="detalle">Coge <code>Asalith-manual.zip</code> de la <a href="https://github.com/PerlandDev/asalith-modpack/releases" target="_blank" rel="noopener">sección de releases</a>. Contiene las carpetas <code>mods</code> y <code>config</code> ya preparadas.</span>
+      </li>
+      <li>
+        <strong>Copia el contenido dentro de <code>.minecraft</code>.</strong>
+        <span class="detalle">Extrae el ZIP y arrastra las carpetas <code>mods</code> y <code>config</code> dentro de <code>.minecraft</code>. Si ya tenías una carpeta <code>mods</code> de otro pack, <strong>bórrala antes</strong>: mezclar mods rompe el juego.</span>
+      </li>
+      <li>
+        <strong>Asigna memoria.</strong>
+        <span class="detalle">En TLauncher, entra en <strong>Ajustes</strong> y sube la memoria asignada a 4–6 GB.</span>
+      </li>
+      <li>
+        <strong>Entra con el perfil de Forge.</strong>
+        <span class="detalle">Asegúrate de seleccionar la versión <strong>Forge 1.20.1</strong>, no la normal. Si el juego se cierra al arrancar, casi siempre es que quedaron mods viejos en la carpeta.</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="bloque contenedor" id="mods">
+  <h2>Qué llevas dentro <span class="oculto-visual">lista de mods</span></h2>
+  <p class="entradilla">Lista completa de lo que instala el pack, generada automáticamente en cada actualización. <span id="contador"></span></p>
+  <div class="tabla-envoltorio">
+    <table>
+      <thead>
+        <tr><th scope="col">Nombre</th><th scope="col">Tipo</th><th scope="col">Dónde se instala</th></tr>
+      </thead>
+      <tbody id="lista-mods">
+        <tr><td colspan="3" class="menor">Cargando la lista…</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</main>
 
 <footer>
-  <p>
-    URL del pack: <code>https://perlanddev.github.io/asalith-modpack/pack.toml</code><br>
-    Código fuente en <a href="https://github.com/PerlandDev/asalith-modpack" target="_blank" rel="noopener">GitHub</a>.
-  </p>
+  <div class="contenedor pie-rejilla">
+    <div>
+      <h3>Asalith Fields</h3>
+      <p>Modpack oficial del servidor Asalith.</p>
+      <p>Minecraft 1.20.1 · Forge</p>
+    </div>
+    <div>
+      <h3>Enlaces</h3>
+      <p><a href="https://github.com/PerlandDev/asalith-modpack">Repositorio en GitHub</a></p>
+      <p><a href="https://github.com/PerlandDev/asalith-modpack/releases">Descargas y versiones</a></p>
+    </div>
+  </div>
 </footer>
 
-</div>
-
 <script>
-document.querySelectorAll('.copiar').forEach(function (boton) {
-  boton.addEventListener('click', function () {
-    var texto = document.getElementById(boton.dataset.copiar).textContent;
-    navigator.clipboard.writeText(texto).then(function () {
-      boton.textContent = '¡Copiado!';
-      setTimeout(function () { boton.textContent = 'Copiar'; }, 1600);
+(function () {
+  'use strict';
+
+  // --- Pestañas de lanzador ---
+  // Los paneles se sirven visibles: si el JS falla, las tres guías siguen
+  // leyéndose una detrás de otra en lugar de desaparecer.
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  var paneles = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+
+  function activar(i, mover) {
+    tabs.forEach(function (t, j) {
+      var sel = i === j;
+      t.setAttribute('aria-selected', String(sel));
+      t.tabIndex = sel ? 0 : -1;
+      paneles[j].hidden = !sel;
+    });
+    if (mover) tabs[i].focus();
+  }
+
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function () { activar(i, false); });
+    tab.addEventListener('keydown', function (e) {
+      var salto = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+      if (salto) { e.preventDefault(); activar((i + salto + tabs.length) % tabs.length, true); }
+      else if (e.key === 'Home') { e.preventDefault(); activar(0, true); }
+      else if (e.key === 'End') { e.preventDefault(); activar(tabs.length - 1, true); }
     });
   });
-});
+  if (tabs.length) activar(0, false);
 
-var LADOS = { both: 'Cliente y servidor', client: 'Solo cliente', server: 'Solo servidor' };
-var TIPOS = {
-  mods: 'Mod', resourcepacks: 'Recursos', shaderpacks: 'Shaders', datapacks: 'Datapack'
-};
+  // --- Copiar al portapapeles ---
+  document.querySelectorAll('.copiar').forEach(function (boton) {
+    boton.addEventListener('click', function () {
+      var texto = document.getElementById(boton.dataset.copiar).textContent;
+      navigator.clipboard.writeText(texto).then(function () {
+        var antes = boton.textContent;
+        boton.textContent = '¡Copiado!';
+        setTimeout(function () { boton.textContent = antes; }, 1600);
+      });
+    });
+  });
 
-fetch('mods.json')
-  .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-  .then(function (datos) {
-    var cuerpo = document.getElementById('lista-mods');
-    document.getElementById('contador').textContent = '(' + datos.total + ')';
+  // --- Lista de mods ---
+  var TIPOS = { mods: 'Mod', resourcepacks: 'Pack de recursos', shaderpacks: 'Shaders', datapacks: 'Datapack' };
+  var LADOS = { both: 'Cliente y servidor', client: 'Solo cliente', server: 'Solo servidor' };
+  var cuerpo = document.getElementById('lista-mods');
 
-    if (datos.pack && datos.pack.forge) {
-      document.getElementById('etiquetas').innerHTML =
-        '<span class="etiqueta">Minecraft ' + datos.pack.minecraft + '</span>' +
-        '<span class="etiqueta">Forge ' + datos.pack.forge + '</span>' +
-        '<span class="etiqueta">v' + datos.pack.version + '</span>';
-    }
+  function fila(celdas) {
+    var tr = document.createElement('tr');
+    celdas.forEach(function (c) { tr.appendChild(c); });
+    return tr;
+  }
+  function celda(texto, clase) {
+    var td = document.createElement('td');
+    td.textContent = texto;
+    if (clase) td.className = clase;
+    return td;
+  }
+  function mensaje(texto) {
+    var td = celda(texto, 'menor');
+    td.colSpan = 3;
+    cuerpo.replaceChildren(fila([td]));
+  }
 
-    if (!datos.entradas.length) {
-      cuerpo.innerHTML = '<tr><td colspan="3" class="lado">Todavía no hay mods en el pack.</td></tr>';
-      return;
-    }
-
-    cuerpo.innerHTML = '';
-    datos.entradas.forEach(function (entrada) {
-      var fila = document.createElement('tr');
-
-      var celdaNombre = document.createElement('td');
-      if (entrada.enlace) {
-        var a = document.createElement('a');
-        a.href = entrada.enlace;
-        a.target = '_blank';
-        a.rel = 'noopener';
-        a.textContent = entrada.nombre;
-        celdaNombre.appendChild(a);
-      } else {
-        celdaNombre.textContent = entrada.nombre;
+  fetch('mods.json')
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (datos) {
+      if (datos.pack) {
+        if (datos.pack.minecraft) document.getElementById('dato-mc').textContent = datos.pack.minecraft;
+        if (datos.pack.forge) document.getElementById('dato-forge').textContent = datos.pack.forge;
+        if (datos.pack.version) {
+          var estado = document.getElementById('dato-version');
+          estado.textContent = 'v' + datos.pack.version + (datos.total ? '' : ' · en preparación');
+        }
       }
 
-      var celdaTipo = document.createElement('td');
-      celdaTipo.className = 'lado';
-      celdaTipo.textContent = TIPOS[entrada.carpeta] || entrada.carpeta;
+      if (!datos.total) {
+        mensaje('Todavía estamos montando la lista de mods. Vuelve pronto.');
+        return;
+      }
 
-      var celdaLado = document.createElement('td');
-      celdaLado.className = 'lado';
-      celdaLado.textContent = LADOS[entrada.lado] || entrada.lado;
+      document.getElementById('contador').textContent =
+        datos.total === 1 ? 'Ahora mismo: 1 elemento.' : 'Ahora mismo: ' + datos.total + ' elementos.';
 
-      fila.append(celdaNombre, celdaTipo, celdaLado);
-      cuerpo.appendChild(fila);
+      cuerpo.replaceChildren.apply(cuerpo, datos.entradas.map(function (e) {
+        var nombre = document.createElement('td');
+        if (e.enlace) {
+          var a = document.createElement('a');
+          a.href = e.enlace; a.target = '_blank'; a.rel = 'noopener';
+          a.textContent = e.nombre;
+          nombre.appendChild(a);
+        } else {
+          nombre.textContent = e.nombre;
+        }
+        return fila([nombre, celda(TIPOS[e.carpeta] || e.carpeta, 'menor'), celda(LADOS[e.lado] || e.lado, 'menor')]);
+      }));
+    })
+    .catch(function () {
+      mensaje('No se pudo cargar la lista de mods. Consúltala en el repositorio.');
     });
-  })
-  .catch(function () {
-    document.getElementById('lista-mods').innerHTML =
-      '<tr><td colspan="3" class="lado">No se pudo cargar la lista de mods.</td></tr>';
-  });
+})();
 </script>
 </body>
 </html>

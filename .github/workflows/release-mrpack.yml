@@ -1,4 +1,4 @@
-name: Publicar .mrpack
+name: Publicar descargas
 
 on:
   push:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  export:
+  publicar:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,15 +18,37 @@ jobs:
         with:
           go-version: '1.22'
 
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
       - name: Instalar packwiz
         run: go install github.com/packwiz/packwiz@latest
 
-      - name: Refrescar índice y exportar
+      - name: Exportar .mrpack
         run: |
           packwiz refresh
           packwiz modrinth export -o Asalith.mrpack
 
+      # TLauncher no entiende .mrpack, asi que publicamos ademas un ZIP con los
+      # mods ya descargados para copiarlos a mano dentro de .minecraft.
+      - name: Preparar ZIP de instalacion manual
+        run: |
+          mkdir -p manual && cd manual
+          curl -sSL -o bootstrap.jar \
+            https://github.com/packwiz/packwiz-installer-bootstrap/releases/latest/download/packwiz-installer-bootstrap.jar
+          java -jar bootstrap.jar -g -s client \
+            https://perlanddev.github.io/asalith-modpack/pack.toml
+          rm -f bootstrap.jar packwiz-installer.jar packwiz.json
+          if [ -z "$(ls -A)" ]; then
+            echo "::warning::El pack no tiene mods todavia; el ZIP manual saldra vacio."
+          fi
+          zip -r ../Asalith-manual.zip .
+
       - uses: softprops/action-gh-release@v2
         with:
-          files: Asalith.mrpack
+          files: |
+            Asalith.mrpack
+            Asalith-manual.zip
           generate_release_notes: true

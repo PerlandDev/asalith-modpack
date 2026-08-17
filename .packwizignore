@@ -10,6 +10,7 @@ LICENSE
 index.html
 mods.json
 scripts/**
+assets/**
 docs/**
 *.mrpack
 *.zip

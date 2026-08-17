@@ -5,6 +5,9 @@ mods.json
 
 # Caches de herramientas locales
 .impeccable/
+
+# Vista previa de la insignia (solo para revisarla a ojo)
+assets/preview-badge.png
 .packwiz-cache/
 .DS_Store
 Thumbs.db
