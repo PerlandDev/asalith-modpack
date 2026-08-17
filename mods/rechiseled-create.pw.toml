@@ -1,0 +1,13 @@
+name = "Rechiseled: Create"
+filename = "rechiseledcreate-1.1.1-forge-mc1.20.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/E6867niZ/versions/y67Ftzhj/rechiseledcreate-1.1.1-forge-mc1.20.jar"
+hash-format = "sha512"
+hash = "c654b5124e59ad80155e11754d62d4bc25b23aca9cf151afe19dd7694fb8dd60f6d8850a37053e89de7262c570580313f454080104c43da8149c72595b75caa0"
+
+[update]
+[update.modrinth]
+mod-id = "E6867niZ"
+version = "y67Ftzhj"

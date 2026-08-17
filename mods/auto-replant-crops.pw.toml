@@ -1,0 +1,13 @@
+name = "Auto Replant Crops"
+filename = "auto-replant-crops-v1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/dlyg3FUx/versions/apA0SqDh/auto-replant-crops-v1.jar"
+hash-format = "sha512"
+hash = "ee1248b59d2f7510032f6beb886c35af6517f9ba9ef3442d9f05d0f316ff27b2fda3293364f05ee65971f9394b5306ec2de982fe03830a401182f639312a3649"
+
+[update]
+[update.modrinth]
+mod-id = "dlyg3FUx"
+version = "apA0SqDh"

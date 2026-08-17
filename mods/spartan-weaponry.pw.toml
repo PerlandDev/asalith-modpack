@@ -1,0 +1,13 @@
+name = "Spartan Weaponry"
+filename = "SpartanWeaponry-1.20.1-forge-3.2.1-all.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/icU5P2Mk/versions/4U6gwadt/SpartanWeaponry-1.20.1-forge-3.2.1-all.jar"
+hash-format = "sha512"
+hash = "3dd17f56dea15a1dd87b433612876fd0ebb426eca5dc2311f5cd7098cad549243ac25fe872bae28b0a18f0d7ae4a35070df2ec5c3be392cb916b8fbb44b38dfb"
+
+[update]
+[update.modrinth]
+mod-id = "icU5P2Mk"
+version = "4U6gwadt"

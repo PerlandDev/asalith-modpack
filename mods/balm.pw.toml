@@ -1,0 +1,13 @@
+name = "Balm"
+filename = "balm-forge-1.20.1-7.3.42.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/MBAkmtvl/versions/PtvPxXii/balm-forge-1.20.1-7.3.42.jar"
+hash-format = "sha512"
+hash = "d921f38208eb2698ac8103c467f10d8f15949b06839230110313173819cbf8127c3fb65467d81abf4aa7b20fd808f686f3f375d6954f53633a704e1922bc7313"
+
+[update]
+[update.modrinth]
+mod-id = "MBAkmtvl"
+version = "PtvPxXii"

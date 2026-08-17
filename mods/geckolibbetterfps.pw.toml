@@ -1,0 +1,13 @@
+name = "GeckolibBetterFPS"
+filename = "gbf-1.0.2.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/CZyWdBUo/versions/tlhG5poa/gbf-1.0.2.jar"
+hash-format = "sha512"
+hash = "c211b90eff1c91643ecdd1af9de32f01f4d0e272a31b791fd54e1869e6dca35d019502a16b2394ab40fa554623edf2a07631e4725523fcd787b91e23cafbb86a"
+
+[update]
+[update.modrinth]
+mod-id = "CZyWdBUo"
+version = "tlhG5poa"

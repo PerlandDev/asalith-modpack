@@ -1,0 +1,13 @@
+name = "Quick Skin"
+filename = "Quick Skin - Forge - 1.20.1-2.6.2.4.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/zAIE84Ch/versions/87G3F0Xr/Quick%20Skin%20-%20Forge%20-%201.20.1-2.6.2.4.jar"
+hash-format = "sha512"
+hash = "fd480f7ab366cf6979de746c2ea3cfe477b8664f56a4e223cbe39b519f215a5f28571fdead3376627790406586d77acb6ee4cc0362ccbd87a96e4ee51c9b6c1b"
+
+[update]
+[update.modrinth]
+mod-id = "zAIE84Ch"
+version = "87G3F0Xr"
