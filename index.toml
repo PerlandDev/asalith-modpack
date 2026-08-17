@@ -22,7 +22,7 @@ metafile = true
 
 [[files]]
 file = "mods/athena-ctm.pw.toml"
-hash = "e11ddca37c00c8cdf8ee89c7b59df544f50966d2d6c5b016916f023afb98c02e"
+hash = "49ef0b29b650084f38aac8faf1537b966f1c976029b1df48bb72a614c35a9641"
 metafile = true
 
 [[files]]
@@ -122,7 +122,7 @@ metafile = true
 
 [[files]]
 file = "mods/fusion-connected-textures.pw.toml"
-hash = "c81353a701cfd393a9ddc090029c2ac811abf210bc77208127715b1ff350a7af"
+hash = "c58c0418e8490b91b86af7fc4a57374b7d1c7592506f41a28710bbd28b96f718"
 metafile = true
 
 [[files]]
