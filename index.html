@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asalith — Modpack</title>
+<meta name="description" content="Modpack oficial del servidor Asalith. Minecraft 1.20.1 con Forge.">
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --border: #262b36;
+    --text: #e6e9ef;
+    --muted: #99a1b3;
+    --accent: #7aa2f7;
+    --accent-soft: rgba(122, 162, 247, .12);
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .envoltorio { max-width: 900px; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 2rem; margin-bottom: 2.5rem; }
+  h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); margin: 0 0 .4rem; letter-spacing: -.02em; }
+  .subtitulo { color: var(--muted); margin: 0 0 1.25rem; font-size: 1.05rem; }
+  .etiquetas { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .etiqueta {
+    background: var(--accent-soft); color: var(--accent);
+    border: 1px solid rgba(122,162,247,.25);
+    padding: .2rem .65rem; border-radius: 999px; font-size: .82rem; font-weight: 600;
+  }
+  h2 { font-size: 1.35rem; margin: 2.5rem 0 .9rem; letter-spacing: -.01em; }
+  h3 { font-size: 1rem; margin: 1.5rem 0 .5rem; color: var(--muted); font-weight: 600; }
+  p { color: #cbd2e0; }
+  a { color: var(--accent); }
+  ol, ul { color: #cbd2e0; padding-left: 1.3rem; }
+  li { margin: .4rem 0; }
+  code {
+    font-family: var(--mono); font-size: .88em;
+    background: #1e222b; border: 1px solid var(--border);
+    padding: .12em .4em; border-radius: 5px;
+  }
+  .bloque {
+    position: relative; background: var(--panel); border: 1px solid var(--border);
+    border-radius: 10px; padding: 1rem 1.1rem; overflow-x: auto;
+  }
+  .bloque code { background: none; border: none; padding: 0; white-space: pre; }
+  .copiar {
+    position: absolute; top: .55rem; right: .55rem;
+    background: #232834; color: var(--muted); border: 1px solid var(--border);
+    border-radius: 6px; padding: .25rem .6rem; font-size: .78rem; cursor: pointer;
+  }
+  .copiar:hover { color: var(--text); border-color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; margin-top: .75rem; font-size: .92rem; }
+  th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; font-size: .82rem; text-transform: uppercase; letter-spacing: .04em; }
+  .tabla-envoltorio { overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; }
+  .lado { color: var(--muted); font-size: .82rem; }
+  footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: .88rem; }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #ffffff; --panel: #f6f7f9; --border: #e2e5ea;
+      --text: #14171f; --muted: #5b6474; --accent: #2f5fd0;
+      --accent-soft: rgba(47,95,208,.09);
+    }
+    p, ol, ul { color: #333a48; }
+    code { background: #eef0f4; }
+    .copiar { background: #e9ecf1; }
+  }
+</style>
+</head>
+<body>
+<div class="envoltorio">
+
+<header>
+  <h1>Asalith</h1>
+  <p class="subtitulo">Modpack oficial del servidor Asalith.</p>
+  <div class="etiquetas" id="etiquetas">
+    <span class="etiqueta">Minecraft 1.20.1</span>
+    <span class="etiqueta">Forge</span>
+  </div>
+</header>
+
+<h2>Instalación</h2>
+<p>
+  El modpack se instala y se actualiza solo mediante <strong>packwiz</strong>. Recomendamos
+  <a href="https://prismlauncher.org/" target="_blank" rel="noopener">Prism Launcher</a>.
+</p>
+
+<ol>
+  <li>Crea una instancia de <strong>Minecraft 1.20.1</strong> con <strong>Forge</strong>.</li>
+  <li>Abre <em>Editar instancia → Configuración → Ajustes de Java</em> y pega esto al final de los argumentos personalizados:</li>
+</ol>
+
+<div class="bloque">
+  <button class="copiar" data-copiar="cmd-bootstrap">Copiar</button>
+  <code id="cmd-bootstrap">-jar packwiz-installer-bootstrap.jar https://perlanddev.github.io/asalith-modpack/pack.toml</code>
+</div>
+
+<ol start="3">
+  <li>
+    Descarga
+    <a href="https://github.com/packwiz/packwiz-installer-bootstrap/releases/latest" target="_blank" rel="noopener">packwiz-installer-bootstrap.jar</a>
+    y colócalo en la carpeta <code>.minecraft</code> de la instancia.
+  </li>
+  <li>Inicia el juego. Cada vez que arranques, el modpack se actualizará automáticamente.</li>
+</ol>
+
+<h3>Alternativa: importar el .mrpack</h3>
+<p>
+  Si prefieres una instalación puntual sin actualizaciones automáticas, descarga el
+  <code>.mrpack</code> de la
+  <a href="https://github.com/PerlandDev/asalith-modpack/releases/latest" target="_blank" rel="noopener">última release</a>
+  e impórtalo en Prism Launcher o en la app de Modrinth.
+</p>
+
+<h2>Lista de mods <span id="contador" class="lado"></span></h2>
+<div class="tabla-envoltorio">
+  <table>
+    <thead>
+      <tr><th>Nombre</th><th>Tipo</th><th>Lado</th></tr>
+    </thead>
+    <tbody id="lista-mods">
+      <tr><td colspan="3" class="lado">Cargando…</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<footer>
+  <p>
+    URL del pack: <code>https://perlanddev.github.io/asalith-modpack/pack.toml</code><br>
+    Código fuente en <a href="https://github.com/PerlandDev/asalith-modpack" target="_blank" rel="noopener">GitHub</a>.
+  </p>
+</footer>
+
+</div>
+
+<script>
+document.querySelectorAll('.copiar').forEach(function (boton) {
+  boton.addEventListener('click', function () {
+    var texto = document.getElementById(boton.dataset.copiar).textContent;
+    navigator.clipboard.writeText(texto).then(function () {
+      boton.textContent = '¡Copiado!';
+      setTimeout(function () { boton.textContent = 'Copiar'; }, 1600);
+    });
+  });
+});
+
+var LADOS = { both: 'Cliente y servidor', client: 'Solo cliente', server: 'Solo servidor' };
+var TIPOS = {
+  mods: 'Mod', resourcepacks: 'Recursos', shaderpacks: 'Shaders', datapacks: 'Datapack'
+};
+
+fetch('mods.json')
+  .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(function (datos) {
+    var cuerpo = document.getElementById('lista-mods');
+    document.getElementById('contador').textContent = '(' + datos.total + ')';
+
+    if (datos.pack && datos.pack.forge) {
+      document.getElementById('etiquetas').innerHTML =
+        '<span class="etiqueta">Minecraft ' + datos.pack.minecraft + '</span>' +
+        '<span class="etiqueta">Forge ' + datos.pack.forge + '</span>' +
+        '<span class="etiqueta">v' + datos.pack.version + '</span>';
+    }
+
+    if (!datos.entradas.length) {
+      cuerpo.innerHTML = '<tr><td colspan="3" class="lado">Todavía no hay mods en el pack.</td></tr>';
+      return;
+    }
+
+    cuerpo.innerHTML = '';
+    datos.entradas.forEach(function (entrada) {
+      var fila = document.createElement('tr');
+
+      var celdaNombre = document.createElement('td');
+      if (entrada.enlace) {
+        var a = document.createElement('a');
+        a.href = entrada.enlace;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.textContent = entrada.nombre;
+        celdaNombre.appendChild(a);
+      } else {
+        celdaNombre.textContent = entrada.nombre;
+      }
+
+      var celdaTipo = document.createElement('td');
+      celdaTipo.className = 'lado';
+      celdaTipo.textContent = TIPOS[entrada.carpeta] || entrada.carpeta;
+
+      var celdaLado = document.createElement('td');
+      celdaLado.className = 'lado';
+      celdaLado.textContent = LADOS[entrada.lado] || entrada.lado;
+
+      fila.append(celdaNombre, celdaTipo, celdaLado);
+      cuerpo.appendChild(fila);
+    });
+  })
+  .catch(function () {
+    document.getElementById('lista-mods').innerHTML =
+      '<tr><td colspan="3" class="lado">No se pudo cargar la lista de mods.</td></tr>';
+  });
+</script>
+</body>
+</html>

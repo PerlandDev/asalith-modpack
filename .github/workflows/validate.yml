@@ -1,0 +1,28 @@
+name: Validar modpack
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - name: Instalar packwiz
+        run: go install github.com/packwiz/packwiz@latest
+
+      # Si `packwiz refresh` cambia el índice, es que alguien olvidó ejecutarlo
+      # antes de commitear: los hashes del index.toml estarían obsoletos.
+      - name: Comprobar que el índice está actualizado
+        run: |
+          packwiz refresh
+          git diff --exit-code || {
+            echo "::error::index.toml/pack.toml desactualizados. Ejecuta 'packwiz refresh' y commitea los cambios."
+            exit 1
+          }

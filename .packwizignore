@@ -1,0 +1,15 @@
+.git/**
+.github/**
+.impeccable/**
+**/.gitkeep
+.gitignore
+.nojekyll
+.packwizignore
+README.md
+LICENSE
+index.html
+mods.json
+scripts/**
+docs/**
+*.mrpack
+*.zip

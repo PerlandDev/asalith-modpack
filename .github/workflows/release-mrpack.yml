@@ -1,0 +1,32 @@
+name: Publicar .mrpack
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - name: Instalar packwiz
+        run: go install github.com/packwiz/packwiz@latest
+
+      - name: Refrescar índice y exportar
+        run: |
+          packwiz refresh
+          packwiz modrinth export -o Asalith.mrpack
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: Asalith.mrpack
+          generate_release_notes: true

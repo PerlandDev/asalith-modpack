@@ -1,0 +1,7 @@
+*.mrpack
+*.zip
+# Generado en CI por scripts/build_modlist.py
+mods.json
+.packwiz-cache/
+.DS_Store
+Thumbs.db
