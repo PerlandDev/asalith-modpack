@@ -56,9 +56,11 @@ R_INTERIOR_BORDE = 236.0
 R_ESCENA = 228.0
 HORIZONTE = (260.0, 300.0)
 
-# Alturas de las dos colinas en el lienzo de referencia.
-Y_COLINA_FONDO = 336.0
-Y_COLINA_FRENTE = 392.0
+# Alturas de las dos colinas en el lienzo de referencia. La colina delantera
+# queda justo por encima del logotipo: el texto se apoya en verde solido y la
+# linea de coniferas se recorta contra el cielo, como en el logotipo original.
+Y_COLINA_FONDO = 318.0
+Y_COLINA_FRENTE = 334.0
 
 
 def colina(y_base: float, amplitud: float, fase: float,
@@ -105,14 +107,15 @@ COLINA_A = colina(Y_COLINA_FONDO, 7.0, 0.6)
 COLINA_B = colina(Y_COLINA_FRENTE, 9.0, 2.4)
 
 # (x, alto, ancho) — la base se calcula sobre la colina correspondiente.
+# El centro se deja despejado para que el sol se vea entero entre los arboles.
 CONIFERAS_FONDO = [
-    (44, 74, 38), (74, 100, 48), (104, 68, 34), (140, 88, 42), (172, 60, 32),
-    (206, 78, 38), (300, 72, 36), (334, 96, 46), (368, 64, 32), (400, 84, 40),
-    (434, 70, 36), (466, 92, 44),
+    (40, 70, 36), (68, 96, 46), (96, 62, 32), (124, 84, 40), (152, 58, 30),
+    (180, 76, 38), (208, 64, 32), (312, 68, 34), (340, 90, 44), (368, 60, 30),
+    (396, 82, 40), (424, 66, 34), (452, 94, 46), (480, 72, 36),
 ]
 CONIFERAS_FRENTE = [
-    (30, 128, 62), (66, 158, 76), (104, 116, 58),
-    (416, 122, 60), (452, 160, 78), (488, 124, 62),
+    (26, 104, 52), (58, 132, 64), (92, 92, 46),
+    (428, 96, 48), (462, 134, 66), (494, 106, 52),
 ]
 
 PAJAROS = [(196, 150, 13), (232, 134, 10), (266, 154, 11), (318, 142, 12)]
@@ -168,12 +171,12 @@ def escena_svg(con_texto: bool) -> str:
 
     if con_texto:
         p.append(
-            f'<text x="260" y="378" text-anchor="middle" fill="{CREMA}" '
+            f'<text x="260" y="392" text-anchor="middle" fill="{CREMA}" '
             "font-family=\"'Archivo Black','Arial Black',Arial,sans-serif\" "
             'font-size="76" letter-spacing="1">ASALITH</text>'
         )
         p.append(
-            f'<text x="260" y="424" text-anchor="middle" fill="{ROJO_TIERRA}" '
+            f'<text x="260" y="438" text-anchor="middle" fill="{ROJO_TIERRA}" '
             "font-family=\"'Archivo Black','Arial Black',Arial,sans-serif\" "
             'font-size="37" letter-spacing="12">FIELDS</text>'
         )
@@ -258,8 +261,8 @@ def construir_preview_badge() -> None:
     for arbol in arboles_plantados(CONIFERAS_FRENTE, COLINA_B):
         dc.polygon([(x * S, y * S) for x, y in arbol], fill=ARBOL_FRENTE)
 
-    _centrar(dc, "ASALITH", _fuente(int(76 * S)), int(316 * S), CREMA, L)
-    _centrar(dc, "FIELDS", _fuente(int(37 * S)), int(390 * S), ROJO_TIERRA, L, espaciado=int(12 * S))
+    _centrar(dc, "ASALITH", _fuente(int(76 * S)), int(330 * S), CREMA, L)
+    _centrar(dc, "FIELDS", _fuente(int(37 * S)), int(404 * S), ROJO_TIERRA, L, espaciado=int(12 * S))
 
     mascara = Image.new("L", (L, L), 0)
     ImageDraw.Draw(mascara).ellipse(
