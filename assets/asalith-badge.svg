@@ -42,7 +42,7 @@
   <polygon points="428.0,241.5 442.4,281.8 435.9,281.8 447.2,308.7 439.5,308.7 452.0,337.5 404.0,337.5 416.5,308.7 408.8,308.7 420.1,281.8 413.6,281.8" fill="#161f11"/>
   <polygon points="462.0,205.3 481.8,261.6 472.9,261.6 488.4,299.1 477.8,299.1 495.0,339.3 429.0,339.3 446.2,299.1 435.6,299.1 451.1,261.6 442.2,261.6" fill="#161f11"/>
   <polygon points="494.0,236.6 509.6,281.1 502.6,281.1 514.8,310.8 506.5,310.8 520.0,342.6 468.0,342.6 481.5,310.8 473.2,310.8 485.4,281.1 478.4,281.1" fill="#161f11"/>
-  <text x="260" y="392" text-anchor="middle" fill="#f2ebdc" font-family="'Archivo Black','Arial Black',Arial,sans-serif" font-size="76" letter-spacing="1">ASALITH</text>
-  <text x="260" y="438" text-anchor="middle" fill="#8f2a1c" font-family="'Archivo Black','Arial Black',Arial,sans-serif" font-size="37" letter-spacing="12">FIELDS</text>
+  <text x="260" y="392" text-anchor="middle" fill="#f2ebdc" font-family="'Archivo Black','Arial Black',Arial,sans-serif" font-size="76" textLength="330" lengthAdjust="spacingAndGlyphs">ASALITH</text>
+  <text x="260" y="438" text-anchor="middle" fill="#8f2a1c" font-family="'Archivo Black','Arial Black',Arial,sans-serif" font-size="37" textLength="238" lengthAdjust="spacing">FIELDS</text>
   </g>
 </svg>

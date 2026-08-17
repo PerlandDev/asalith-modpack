@@ -170,15 +170,19 @@ def escena_svg(con_texto: bool) -> str:
         p.append(f'<polygon points="{pts_svg(arbol)}" fill="{ARBOL_FRENTE}"/>')
 
     if con_texto:
+        # textLength fija el ancho del logotipo: sin ella, un equipo sin Arial
+        # Black usaria otra tipografia de reserva y el texto podria salirse del
+        # circulo. En "FIELDS" solo se ajusta el espaciado, para no deformar
+        # las letras y conservar el tracking ancho.
         p.append(
             f'<text x="260" y="392" text-anchor="middle" fill="{CREMA}" '
             "font-family=\"'Archivo Black','Arial Black',Arial,sans-serif\" "
-            'font-size="76" letter-spacing="1">ASALITH</text>'
+            'font-size="76" textLength="330" lengthAdjust="spacingAndGlyphs">ASALITH</text>'
         )
         p.append(
             f'<text x="260" y="438" text-anchor="middle" fill="{ROJO_TIERRA}" '
             "font-family=\"'Archivo Black','Arial Black',Arial,sans-serif\" "
-            'font-size="37" letter-spacing="12">FIELDS</text>'
+            'font-size="37" textLength="238" lengthAdjust="spacing">FIELDS</text>'
         )
     p.append("</g>")
     return "\n  ".join(p)
