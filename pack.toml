@@ -1,12 +1,12 @@
-name = "Asalith"
+name = "Asalith Fields"
 author = "PerlandDev"
-version = "1.0.1"
+version = "1.0.2"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "da33a8e28c153c514e52abbd5b2c87810bea3f6c537e8c0f0508e221b22f29a0"
+hash = "ad9ae17d8697a84ed6b291a65955162c6285a4032a4f68f4a65110c789ee4b3f"
 
 [versions]
 forge = "47.4.22"
