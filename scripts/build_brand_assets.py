@@ -279,45 +279,43 @@ def construir_preview_badge() -> None:
 
 
 def construir_og() -> None:
-    """Tarjeta apaisada 1200x630. El texto vive por encima de la linea de arboles."""
+    """Tarjeta apaisada 1200x630 para Discord y redes.
+
+    Es la misma escena, reencuadrada: el logotipo ocupa la mitad superior sobre
+    los arcos y la linea de arboles queda por debajo. La linea de version va
+    abajo del todo, sobre el verde solido, porque en crema sobre la banda clara
+    del atardecer apenas se leia.
+    """
     from PIL import Image, ImageDraw
 
     W, H, S = 1200, 630, 3
     img = Image.new("RGB", (W * S, H * S), VERDE_BORDE)
     d = ImageDraw.Draw(img)
 
-    # El horizonte queda bajo, con los arcos abriendose sobre todo el ancho.
-    hx, hy = W * S * 0.5, H * S * 0.80
-    k = (W * S) / 520 * 0.92
+    k = (W * S) / 520          # escena -> tarjeta, en horizontal
+    kt = k * 0.42              # los arboles se reducen para no tapar el texto
+    hx, hy = W * S * 0.5, H * S * 0.795
+
     for radio, color in BANDAS:
         r = radio * k
         d.ellipse([hx - r, hy - r, hx + r, hy + r], fill=color)
-    r = SOL[0] * k * 1.15
+    r = SOL[0] * k
     d.ellipse([hx - r, hy - r, hx + r, hy + r], fill=SOL[1])
 
-    # Colinas propias del formato apaisado, en las mismas proporciones.
-    sx = (W * S) / 520
-    perfil_a = colina(0.0, 7.0, 0.6)
-    perfil_b = colina(0.0, 9.0, 2.4)
-    base_a, base_b = H * S * 0.72, H * S * 0.865
+    def dibujar_colina(perfil, base, color_colina, coniferas, color_arbol):
+        borde = [(x * k, base + y * kt) for x, y in perfil]
+        d.polygon(borde + [(W * S, H * S), (0, H * S)], fill=color_colina)
+        for x, alto, ancho in coniferas:
+            y0 = base + altura_colina(perfil, x) * kt
+            pts = conifera(x, 0.0, alto, ancho)          # base en y = 0
+            d.polygon([(px * k, y0 + py * kt) for px, py in pts], fill=color_arbol)
 
-    poli_a = [(x * sx, base_a + y * S) for x, y in perfil_a]
-    d.polygon(poli_a + [(W * S, H * S), (0, H * S)], fill=COLINA_FONDO)
-    for x, alto, ancho in CONIFERAS_FONDO:
-        y_base = base_a + altura_colina(perfil_a, x) * S + 2 * S
-        pts = conifera(x * sx / S, y_base / S, alto * 0.92, ancho)
-        d.polygon([(px * S * (sx / S), py * S) for px, py in pts], fill=ARBOL_FONDO)
+    dibujar_colina(colina(0.0, 7.0, 0.6), H * S * 0.795, COLINA_FONDO, CONIFERAS_FONDO, ARBOL_FONDO)
+    dibujar_colina(colina(0.0, 9.0, 2.4), H * S * 0.885, COLINA_FRENTE, CONIFERAS_FRENTE, ARBOL_FRENTE)
 
-    poli_b = [(x * sx, base_b + y * S) for x, y in perfil_b]
-    d.polygon(poli_b + [(W * S, H * S), (0, H * S)], fill=COLINA_FRENTE)
-    for x, alto, ancho in CONIFERAS_FRENTE:
-        y_base = base_b + altura_colina(perfil_b, x) * S + 2 * S
-        pts = conifera(x * sx / S, y_base / S, alto * 1.05, ancho * 1.05)
-        d.polygon([(px * S * (sx / S), py * S) for px, py in pts], fill=ARBOL_FRENTE)
-
-    _centrar(d, "ASALITH", _fuente(int(158 * S)), int(120 * S), CREMA, W * S)
-    _centrar(d, "FIELDS", _fuente(int(64 * S)), int(300 * S), ROJO_TIERRA, W * S, espaciado=int(24 * S))
-    _centrar(d, "MINECRAFT 1.20.1  ·  FORGE", _fuente(int(30 * S)), int(400 * S), CREMA, W * S,
+    _centrar(d, "ASALITH", _fuente(int(150 * S)), int(96 * S), CREMA, W * S)
+    _centrar(d, "FIELDS", _fuente(int(62 * S)), int(272 * S), ROJO_TIERRA, W * S, espaciado=int(24 * S))
+    _centrar(d, "MINECRAFT 1.20.1  ·  FORGE", _fuente(int(29 * S)), int(566 * S), CREMA, W * S,
              espaciado=int(3 * S))
 
     img.resize((W, H), Image.LANCZOS).save(ASSETS / "og-asalith.png", optimize=True)
