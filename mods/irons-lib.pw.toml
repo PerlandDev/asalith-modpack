@@ -1,0 +1,13 @@
+name = "Iron's Lib"
+filename = "irons_lib-1.20.1-2.1.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/9nfaJPtX/versions/DbpRfa2k/irons_lib-1.20.1-2.1.0.jar"
+hash-format = "sha512"
+hash = "160a442442c32c16a6aaf79dd42b9e75132176cbb5475a81f7bf152c5beb8cd8a2f7f20048bfcbf34a5d7a213ec2215caee76fbd2b2903919aaf4240892eaf77"
+
+[update]
+[update.modrinth]
+mod-id = "9nfaJPtX"
+version = "DbpRfa2k"

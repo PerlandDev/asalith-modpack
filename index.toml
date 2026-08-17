@@ -141,6 +141,11 @@ hash = "db495b3ac268709a2ba673bfe220b10257fb7dae549f94bfbd539617d571f131"
 metafile = true
 
 [[files]]
+file = "mods/irons-lib.pw.toml"
+hash = "84c2b7aa6f75922aa146dffe5c0d351e27f52223c5df7990d3c5bb0e73ca57aa"
+metafile = true
+
+[[files]]
 file = "mods/irons-spells-n-spellbooks.pw.toml"
 hash = "f97ad6dfe0946d657bdf601b6206d328e04bfed98a8ed9ccd8de09134840149f"
 metafile = true
@@ -237,7 +242,7 @@ metafile = true
 
 [[files]]
 file = "mods/sophisticated-core.pw.toml"
-hash = "35df24b18f932f2552cf8c09a1f3494bff9250385fed1a48234b6c415d90d249"
+hash = "7d97be6eb5b5fd23dd3fd17ca2829a92387d7724f6f62e720d53f705ae802568"
 metafile = true
 
 [[files]]
