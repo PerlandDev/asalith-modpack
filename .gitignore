@@ -2,6 +2,9 @@
 *.zip
 # Generado en CI por scripts/build_modlist.py
 mods.json
+
+# Caches de herramientas locales
+.impeccable/
 .packwiz-cache/
 .DS_Store
 Thumbs.db

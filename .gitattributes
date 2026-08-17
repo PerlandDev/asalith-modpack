@@ -1,0 +1,8 @@
+# packwiz calcula hashes sobre el contenido de los ficheros. Si el repo se
+# clona con CRLF en Windows y con LF en CI, los hashes no coinciden y la
+# validacion falla. Forzamos LF en todo lo que packwiz indexa.
+* text=auto eol=lf
+*.jar binary
+*.zip binary
+*.png binary
+*.mrpack binary
