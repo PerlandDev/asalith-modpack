@@ -29,7 +29,7 @@ jobs:
       - name: Exportar .mrpack
         run: |
           packwiz refresh
-          packwiz modrinth export -o Asalith.mrpack
+          packwiz modrinth export -o Asalith-Fields.mrpack
 
       # TLauncher no entiende .mrpack, asi que publicamos ademas un ZIP con los
       # mods ya descargados para copiarlos a mano dentro de .minecraft.
@@ -44,11 +44,11 @@ jobs:
           if [ -z "$(ls -A)" ]; then
             echo "::warning::El pack no tiene mods todavia; el ZIP manual saldra vacio."
           fi
-          zip -r ../Asalith-manual.zip .
+          zip -r ../Asalith-Fields-manual.zip .
 
       - uses: softprops/action-gh-release@v2
         with:
           files: |
-            Asalith.mrpack
-            Asalith-manual.zip
+            Asalith-Fields.mrpack
+            Asalith-Fields-manual.zip
           generate_release_notes: true
