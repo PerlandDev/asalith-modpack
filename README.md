@@ -7,7 +7,7 @@ Modpack del servidor **Asalith**, gestionado con [packwiz](https://packwiz.infra
 | **Minecraft** | 1.20.1 |
 | **Modloader** | Forge 47.4.22 |
 | **Web** | https://perlanddev.github.io/asalith-modpack/ |
-| **Descargas** | [Releases](https://github.com/PerlandDev/asalith-modpack/releases) |
+| **Descargas** | [Última release](https://github.com/PerlandDev/asalith-modpack/releases/latest) |
 
 ---
 
@@ -24,6 +24,14 @@ En resumen:
 - **Prism Launcher** — *Añadir instancia* → pestaña *Importar* → selecciona el `.mrpack`.
 - **TLauncher** — no admite `.mrpack`. Usa `Asalith-manual.zip`, que trae las carpetas
   `mods` y `config` ya preparadas para copiarlas dentro de `.minecraft`.
+
+Descarga siempre desde la **última release**: los `.mrpack` de releases antiguas
+siguen accesibles en GitHub y tienen las versiones de mods de aquel momento.
+
+Para **actualizar** a una versión nueva no basta con volver a importar el `.mrpack`
+encima: borra la instancia (o la carpeta `mods` completa, si instalaste a mano) y
+vuelve a instalar. Si se mezclan mods de dos versiones el cliente no arranca o el
+servidor lo rechaza con *«Incompatible FML modded server»*.
 
 ---
 
