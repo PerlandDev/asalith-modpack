@@ -22,7 +22,7 @@ En resumen:
 
 - **Modrinth App** (recomendado) — importa el `.mrpack` desde el botón `+` → *Import from file*.
 - **Prism Launcher** — *Añadir instancia* → pestaña *Importar* → selecciona el `.mrpack`.
-- **TLauncher** — no admite `.mrpack`. Usa `Asalith-manual.zip`, que trae las carpetas
+- **TLauncher** — no admite `.mrpack`. Usa `Asalith-Fields-manual.zip`, que trae las carpetas
   `mods` y `config` ya preparadas para copiarlas dentro de `.minecraft`.
 
 Descarga siempre desde la **última release**: los `.mrpack` de releases antiguas
@@ -32,6 +32,10 @@ Para **actualizar** a una versión nueva no basta con volver a importar el `.mrp
 encima: borra la instancia (o la carpeta `mods` completa, si instalaste a mano) y
 vuelve a instalar. Si se mezclan mods de dos versiones el cliente no arranca o el
 servidor lo rechaza con *«Incompatible FML modded server»*.
+
+Para saber qué versión tienes instalada, mira el **nombre de la instancia** en el
+lanzador: desde la v1.0.2 el pack se llama **«Asalith Fields»**. Si te aparece solo
+como «Asalith», tienes la v1.0.1 y te faltan mods.
 
 ---
 
@@ -82,7 +86,7 @@ Las descargas se generan solas al crear una etiqueta:
 git tag v1.0.0 && git push --tags
 ```
 
-Eso publica una release con `Asalith.mrpack` y `Asalith-manual.zip`.
+Eso publica una release con `Asalith-Fields.mrpack` y `Asalith-Fields-manual.zip`.
 
 ### Recursos de marca
 
@@ -127,5 +131,5 @@ scripts/             Generación de mods.json y de los recursos de marca
 | Workflow | Cuándo | Qué hace |
 |---|---|---|
 | `deploy-pages.yml` | push a `main` | Publica la web y el pack en GitHub Pages |
-| `release-mrpack.yml` | etiquetas `v*` | Publica `Asalith.mrpack` y `Asalith-manual.zip` |
+| `release-mrpack.yml` | etiquetas `v*` | Publica `Asalith-Fields.mrpack` y `Asalith-Fields-manual.zip` |
 | `validate.yml` | pull requests | Falla si el `index.toml` está desactualizado |
