@@ -1,11 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = "mods/1.21-paintings-for-1.20.1.pw.toml"
-hash = "4b980205318f838fcad12a06a464d7bd78116eb0345297dd0d142d15a8b6999c"
-metafile = true
-
-[[files]]
 file = "mods/3dskinlayers.pw.toml"
 hash = "f9a60f1fa7696847424dcfbdc9c9f6f113eb16d31664e8327c6919e8d929e719"
 metafile = true
