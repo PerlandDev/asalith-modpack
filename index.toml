@@ -1,6 +1,10 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/perland-acceptance.toml"
+hash = "73827d2b95cad330074b43b8ac6d50504867c97f7b8b6f50b9392da1da50478a"
+
+[[files]]
 file = "mods/alexs-mobs.pw.toml"
 hash = "e1016eb125a5a41a10f80847eb00affae0e539e703846f303949ed5d82b7f1bf"
 metafile = true
