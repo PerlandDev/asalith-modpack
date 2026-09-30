@@ -1,0 +1,13 @@
+name = "Fancy World Animations [FWA]"
+filename = "fwa+1.20.1-forge-1.2.31.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/IAzUFvS6/versions/bOJEwehn/fwa%2B1.20.1-forge-1.2.31.jar"
+hash-format = "sha512"
+hash = "2206a6255794d5da7ddb0a7a6687462114378c075b8fa405168afeea93bb3366c826b25e583869584b92f65eda7bfc9041d5b96de55754759e74ec9bc2e906ca"
+
+[update]
+[update.modrinth]
+mod-id = "IAzUFvS6"
+version = "bOJEwehn"

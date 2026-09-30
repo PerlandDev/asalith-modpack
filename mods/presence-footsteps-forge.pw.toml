@@ -1,0 +1,13 @@
+name = "Presence Footsteps [FORGE]"
+filename = "Presence Footsteps [FORGE] 1.0.0.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/dLfueQtY/versions/mru6MmJT/Presence%20Footsteps%20%5BFORGE%5D%201.0.0.jar"
+hash-format = "sha512"
+hash = "a90b22b73530588330125bb52a077fb2bf1be6851e923b850f201abf9c4ec0a596b91c054ea3693b9ba6214ed19567c4484198dce1ca3d2bef35ac0801f2a9ea"
+
+[update]
+[update.modrinth]
+mod-id = "dLfueQtY"
+version = "mru6MmJT"
