@@ -1,13 +1,13 @@
 name = "Iron's Spells 'n Spellbooks"
-filename = "irons_spellbooks-1.20.1-3.16.2.jar"
+filename = "irons_spellbooks-1.20.1-3.16.3.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/s4OWxYQQ/versions/9v34JOKI/irons_spellbooks-1.20.1-3.16.2.jar"
+url = "https://cdn.modrinth.com/data/s4OWxYQQ/versions/hZaEegS9/irons_spellbooks-1.20.1-3.16.3.jar"
 hash-format = "sha512"
-hash = "7e39342e449ac9c30980af59765814376c78340e62a7815bab464ee9c8133d94eff756f1f34239bbabe78a0caa4b2d90bea9ec0e96038671c58577060a74eb66"
+hash = "a699631fa56568d39a30773b8fe96d7a49f1cd7f8e243340ce7ad91b09ccf49c9a6802a944f4bd04b2d88d9fc796a70add1d18d8f326bb2be238b02a8c8076da"
 
 [update]
 [update.modrinth]
 mod-id = "s4OWxYQQ"
-version = "9v34JOKI"
+version = "hZaEegS9"

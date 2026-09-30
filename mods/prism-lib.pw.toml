@@ -1,0 +1,13 @@
+name = "Prism"
+filename = "Prism-1.20.1-forge-1.0.5.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/1OE8wbN0/versions/FFyss87M/Prism-1.20.1-forge-1.0.5.jar"
+hash-format = "sha512"
+hash = "b73de6bf581f5f28d86baa3eeb8ac0ff30aa9a35280da7fa528547bbb9e0aff5f931b434e143a4dfc4d11ae03ce52bc1cfa359beb8b656880e75bf1aa8d91b81"
+
+[update]
+[update.modrinth]
+mod-id = "1OE8wbN0"
+version = "FFyss87M"
