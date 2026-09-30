@@ -1,0 +1,13 @@
+name = "1.21 Paintings for 1.20.1"
+filename = "paintingsmod-1.0.0-forge-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/4JX2PH3t/versions/eP9bKwOu/paintingsmod-1.0.0-forge-1.20.1.jar"
+hash-format = "sha512"
+hash = "c4e8507e28e50b2811e96e6a72b8b0d9d43577c07d9d2ebd5f3a439f79f3d0770095b4a55cb2989ce6c598cd7ca70eca37771b528e45c9314937fa5ed8184c3a"
+
+[update]
+[update.modrinth]
+mod-id = "4JX2PH3t"
+version = "eP9bKwOu"
