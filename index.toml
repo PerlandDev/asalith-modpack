@@ -206,6 +206,11 @@ hash = "765987a78e5d8c782d0da2de99998b43b5907d6c41347d3804045ad109e4a586"
 metafile = true
 
 [[files]]
+file = "mods/quark.pw.toml"
+hash = "8df897c0f7831e919aa528c3c1e5239f39439c123d99761230ab2357132bad98"
+metafile = true
+
+[[files]]
 file = "mods/quick-skin.pw.toml"
 hash = "07f0ca6b5a77c6df8e13d53c703b1a82780e31e348882203f6ec97f324242f8d"
 metafile = true
@@ -303,4 +308,9 @@ metafile = true
 [[files]]
 file = "mods/yungs-better-dungeons.pw.toml"
 hash = "c35112cced2eec8e5782c5c4327ae31bce16cc1356c75e52000053e890e0f0c1"
+metafile = true
+
+[[files]]
+file = "mods/zeta.pw.toml"
+hash = "b43f507cffbcc7178b184fa63b2d74fc6b2b8103c4d299ec5633ccf1f5abdafb"
 metafile = true
