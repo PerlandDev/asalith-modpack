@@ -304,8 +304,3 @@ metafile = true
 file = "mods/yungs-better-dungeons.pw.toml"
 hash = "c35112cced2eec8e5782c5c4327ae31bce16cc1356c75e52000053e890e0f0c1"
 metafile = true
-
-[[files]]
-file = "mods/zeta.pw.toml"
-hash = "b43f507cffbcc7178b184fa63b2d74fc6b2b8103c4d299ec5633ccf1f5abdafb"
-metafile = true
