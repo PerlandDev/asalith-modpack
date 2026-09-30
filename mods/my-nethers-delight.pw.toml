@@ -1,0 +1,13 @@
+name = "My Nether's Delight"
+filename = "MyNethersDelight-1.20.1-1.10.4-backport.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/O53VhQoZ/versions/pOBasFQT/MyNethersDelight-1.20.1-1.10.4-backport.1.jar"
+hash-format = "sha512"
+hash = "e4a141f82790e08b67be2091cd415025a31ec297b8ba36d347108ff109d92c8becd60298cd04ffac04e6128efb89d633af21e8ce2ee03abf7bab1c339ea1f744"
+
+[update]
+[update.modrinth]
+mod-id = "O53VhQoZ"
+version = "pOBasFQT"

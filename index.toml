@@ -1,6 +1,11 @@
 hash-format = "sha256"
 
 [[files]]
+file = "mods/3dskinlayers.pw.toml"
+hash = "f9a60f1fa7696847424dcfbdc9c9f6f113eb16d31664e8327c6919e8d929e719"
+metafile = true
+
+[[files]]
 file = "mods/alexs-mobs.pw.toml"
 hash = "e1016eb125a5a41a10f80847eb00affae0e539e703846f303949ed5d82b7f1bf"
 metafile = true
@@ -43,6 +48,11 @@ metafile = true
 [[files]]
 file = "mods/camera-mod.pw.toml"
 hash = "46807a76af96c004997bf1fd867d9d2e02a8fa1ccf20ef3bcccef0b2ecd3294b"
+metafile = true
+
+[[files]]
+file = "mods/carry-on.pw.toml"
+hash = "a613f5d2df911fea606968bbdb56eebfd05ac02ada846cf0d2e56e72345d9338"
 metafile = true
 
 [[files]]
@@ -126,6 +136,11 @@ hash = "c58c0418e8490b91b86af7fc4a57374b7d1c7592506f41a28710bbd28b96f718"
 metafile = true
 
 [[files]]
+file = "mods/fwa.pw.toml"
+hash = "44cf46db2bec5708673e49843aa0f8a220b78471a7bd04223ef4ba0737a749e6"
+metafile = true
+
+[[files]]
 file = "mods/geckolib.pw.toml"
 hash = "7ffae05c3b8101588b231db8116c34b36a77a0c6e6d7e6af867ae1c5b47e4d10"
 metafile = true
@@ -138,6 +153,16 @@ metafile = true
 [[files]]
 file = "mods/handcrafted.pw.toml"
 hash = "db495b3ac268709a2ba673bfe220b10257fb7dae549f94bfbd539617d571f131"
+metafile = true
+
+[[files]]
+file = "mods/invmove.pw.toml"
+hash = "d3993d3799faf90e195a7e1c73cb8319ef6f6e31cb1bce132b18bbe2e46799e9"
+metafile = true
+
+[[files]]
+file = "mods/invmovecompats.pw.toml"
+hash = "cdc8112f5320b49ad6973f346f86fdae99bc9d0df703c42023f210c9632c8de6"
 metafile = true
 
 [[files]]
@@ -166,8 +191,23 @@ hash = "45c55bdbbf2240dfa30cedb5cd437f5716ccf09a707dcdffbe7f39af3e19ff7f"
 metafile = true
 
 [[files]]
+file = "mods/moonlight.pw.toml"
+hash = "685d7c61f7d5e1c16e3de6f7e16e090c0355cf38e7d416b730093d4dc239d9d2"
+metafile = true
+
+[[files]]
 file = "mods/mowzies-mobs.pw.toml"
 hash = "0e6b04ea03c95a193b564aee5c67b8912c52c1de61cd2bd43222c494e26bbbe9"
+metafile = true
+
+[[files]]
+file = "mods/my-nethers-delight.pw.toml"
+hash = "250e7da18fa48c84c4dd0d663ffb66d3c3d57865c96e1cc6f14c0b901bc2a571"
+metafile = true
+
+[[files]]
+file = "mods/natures-compass.pw.toml"
+hash = "8cad1023bbc6e5c13961de6248a88b91538f3ad315dfdbb40c969e25606d98eb"
 metafile = true
 
 [[files]]
@@ -206,6 +246,11 @@ hash = "765987a78e5d8c782d0da2de99998b43b5907d6c41347d3804045ad109e4a586"
 metafile = true
 
 [[files]]
+file = "mods/presence-footsteps-forge.pw.toml"
+hash = "54936963c5dd1d34a4b6539fedd9200e4520ebb1a78d55fd55448b6a99955630"
+metafile = true
+
+[[files]]
 file = "mods/quick-skin.pw.toml"
 hash = "07f0ca6b5a77c6df8e13d53c703b1a82780e31e348882203f6ec97f324242f8d"
 metafile = true
@@ -228,6 +273,16 @@ metafile = true
 [[files]]
 file = "mods/resourceful-lib.pw.toml"
 hash = "5c07edd0c8fe82e85efd6c027476ba54cf98291526803b74614c3436292e4ab6"
+metafile = true
+
+[[files]]
+file = "mods/scribble.pw.toml"
+hash = "df1b5464f5b59b42724929071d4dd8a31be95d0e4e4fcf07f98bd9ade0a7bc59"
+metafile = true
+
+[[files]]
+file = "mods/smarter-farmers-farmers-replant.pw.toml"
+hash = "d247fe0ad5c3c74b3fc7f29db3b9f9d6897cac0ed2da10ef9419a26878861c7b"
 metafile = true
 
 [[files]]
