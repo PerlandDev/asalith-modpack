@@ -170,6 +170,11 @@ hash = "45c55bdbbf2240dfa30cedb5cd437f5716ccf09a707dcdffbe7f39af3e19ff7f"
 metafile = true
 
 [[files]]
+file = "mods/moonlight.pw.toml"
+hash = "685d7c61f7d5e1c16e3de6f7e16e090c0355cf38e7d416b730093d4dc239d9d2"
+metafile = true
+
+[[files]]
 file = "mods/mowzies-mobs.pw.toml"
 hash = "0e6b04ea03c95a193b564aee5c67b8912c52c1de61cd2bd43222c494e26bbbe9"
 metafile = true
@@ -267,6 +272,11 @@ metafile = true
 [[files]]
 file = "mods/supermartijn642s-core-lib.pw.toml"
 hash = "6d129b9fe30d1eb644f5d895b5c3912672fb34370a96c24c5fd1def68d532086"
+metafile = true
+
+[[files]]
+file = "mods/supplementaries.pw.toml"
+hash = "168b3ee3fa2fe18f712c593d9d90e8b3a8a6a10564376af98bcc6f9719506641"
 metafile = true
 
 [[files]]
