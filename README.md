@@ -136,3 +136,7 @@ scripts/             Generación de mods.json y de los recursos de marca
 | `deploy-pages.yml` | push a `main` | Publica la web y el pack en GitHub Pages |
 | `release-mrpack.yml` | push a `main` y etiquetas `v*` | Publica `Asalith-Fields.mrpack` y `Asalith-Fields-manual.zip` |
 | `validate.yml` | pull requests | Falla si el `index.toml` está desactualizado |
+
+---
+
+TEST
