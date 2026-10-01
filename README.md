@@ -80,13 +80,17 @@ Así el servidor no descarga shaders ni mods de interfaz.
 
 ### Publicar una versión
 
-Las descargas se generan solas al crear una etiqueta:
+Cada push a `main` que cambie el pack publica una release nueva con
+`Asalith-Fields.mrpack` y `Asalith-Fields-manual.zip`, subiendo el parche de la
+última etiqueta (`v1.0.5` → `v1.0.6`). Los cambios que solo tocan la web, el README,
+`assets/` o `scripts/` no generan release.
+
+Para saltar de versión menor o mayor, crea tú la etiqueta y se publica con ese número;
+las releases automáticas siguientes continúan desde ahí:
 
 ```bash
-git tag v1.0.0 && git push --tags
+git tag v1.1.0 && git push --tags
 ```
-
-Eso publica una release con `Asalith-Fields.mrpack` y `Asalith-Fields-manual.zip`.
 
 ### Recursos de marca
 
@@ -104,8 +108,7 @@ dibujo a ojo y no se publica.
 
 1. Añade o actualiza mods con los comandos de arriba.
 2. Ejecuta `packwiz refresh`.
-3. Commitea y haz push a `main`. La web se actualiza sola.
-4. Cuando quieras publicar para los jugadores, crea una etiqueta `v*`.
+3. Commitea y haz push a `main`. La web y la release se actualizan solas.
 
 ---
 
@@ -131,5 +134,5 @@ scripts/             Generación de mods.json y de los recursos de marca
 | Workflow | Cuándo | Qué hace |
 |---|---|---|
 | `deploy-pages.yml` | push a `main` | Publica la web y el pack en GitHub Pages |
-| `release-mrpack.yml` | etiquetas `v*` | Publica `Asalith-Fields.mrpack` y `Asalith-Fields-manual.zip` |
+| `release-mrpack.yml` | push a `main` y etiquetas `v*` | Publica `Asalith-Fields.mrpack` y `Asalith-Fields-manual.zip` |
 | `validate.yml` | pull requests | Falla si el `index.toml` está desactualizado |
