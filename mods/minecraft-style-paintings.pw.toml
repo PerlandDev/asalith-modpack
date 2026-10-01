@@ -1,0 +1,13 @@
+name = "MC style paintings"
+filename = "minecraft_style_paintings-1.0.0-forge-1.20.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "7c1f595130f3ad5c414e29f923e1b64e9d6c7615"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8580700
+project-id = 419711

@@ -51,6 +51,11 @@ hash = "58396d4cd2dee0f75cf56def0ab301021b6e09a83bd2564212152f0a73433568"
 metafile = true
 
 [[files]]
+file = "mods/blueprint.pw.toml"
+hash = "2fab4aa0fa311ac057de40a1c761a87e105552414566fcd14b4efe654f64867c"
+metafile = true
+
+[[files]]
 file = "mods/camera-mod.pw.toml"
 hash = "46807a76af96c004997bf1fd867d9d2e02a8fa1ccf20ef3bcccef0b2ecd3294b"
 metafile = true
@@ -161,6 +166,11 @@ hash = "44cf46db2bec5708673e49843aa0f8a220b78471a7bd04223ef4ba0737a749e6"
 metafile = true
 
 [[files]]
+file = "mods/gallery.pw.toml"
+hash = "513dff304eaff520c5b25a5b245518c95053a58b4c3ca58c070a5ffa14e0c7bf"
+metafile = true
+
+[[files]]
 file = "mods/geckolib.pw.toml"
 hash = "7ffae05c3b8101588b231db8116c34b36a77a0c6e6d7e6af867ae1c5b47e4d10"
 metafile = true
@@ -208,6 +218,16 @@ metafile = true
 [[files]]
 file = "mods/lithostitched.pw.toml"
 hash = "45c55bdbbf2240dfa30cedb5cd437f5716ccf09a707dcdffbe7f39af3e19ff7f"
+metafile = true
+
+[[files]]
+file = "mods/medieval-paintings.pw.toml"
+hash = "a672542c2b04842bdf7e7e3db96ae6409f4d6426705d0dcb87a92b5818d6aa22"
+metafile = true
+
+[[files]]
+file = "mods/minecraft-style-paintings.pw.toml"
+hash = "980b4d0c94b7e59fa22f685295d666a1907024ae8fef5705164b257b4eebbece"
 metafile = true
 
 [[files]]
