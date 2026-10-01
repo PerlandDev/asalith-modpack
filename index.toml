@@ -221,6 +221,11 @@ hash = "0e6b04ea03c95a193b564aee5c67b8912c52c1de61cd2bd43222c494e26bbbe9"
 metafile = true
 
 [[files]]
+file = "mods/music-disc-maker.pw.toml"
+hash = "999b4859068c4da124c3983d18bf398d0d408c0603cb4faeb1176fdf94cd3a21"
+metafile = true
+
+[[files]]
 file = "mods/my-nethers-delight.pw.toml"
 hash = "250e7da18fa48c84c4dd0d663ffb66d3c3d57865c96e1cc6f14c0b901bc2a571"
 metafile = true
