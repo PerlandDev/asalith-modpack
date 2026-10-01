@@ -126,6 +126,11 @@ hash = "9eefd607e0d54ec444e798ccdeede1a09a3939440bd1e11c11b84c07a5134be2"
 metafile = true
 
 [[files]]
+file = "mods/disable-enderman-picking-up-blocks.pw.toml"
+hash = "a7ffda093457e5910f6a747c997723ee8baca1e11d13acbc753ee9b973250c76"
+metafile = true
+
+[[files]]
 file = "mods/distanthorizons.pw.toml"
 hash = "4f9f42729849acf0cc5b5b456bcee2398ba753669f35b873f4b33240ec3abce4"
 metafile = true
