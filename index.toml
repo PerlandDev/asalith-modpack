@@ -106,8 +106,18 @@ hash = "558feef31ece0528dcc38a26053eefefd41e7c67c274bcdba4ba5c77aca8ec6c"
 metafile = true
 
 [[files]]
+file = "mods/cosmetic-armor-reworked.pw.toml"
+hash = "cfa8aa9c0437721dab2057c932c9cf8ec3d3a11f672040601305238d13df85e8"
+metafile = true
+
+[[files]]
 file = "mods/cozy-home.pw.toml"
 hash = "03f08a02ec928c418ad2ae0741a8179cbe97901c73b65221c89f5da86d267ba4"
+metafile = true
+
+[[files]]
+file = "mods/craftable-saddles.pw.toml"
+hash = "55299fac475a781010381fc01860a58a3f9637b246e91c7740c5e0e27a332445"
 metafile = true
 
 [[files]]
@@ -223,6 +233,11 @@ metafile = true
 [[files]]
 file = "mods/lithostitched.pw.toml"
 hash = "45c55bdbbf2240dfa30cedb5cd437f5716ccf09a707dcdffbe7f39af3e19ff7f"
+metafile = true
+
+[[files]]
+file = "mods/lootr.pw.toml"
+hash = "e8b4876d403b4f4daab64bad9704a5b271a33031d1ff8d19d23ebd1e3b8dd39a"
 metafile = true
 
 [[files]]
@@ -353,6 +368,11 @@ metafile = true
 [[files]]
 file = "mods/sophisticated-storage.pw.toml"
 hash = "76027ffecdf0b7cfa6afb07a86de2e921825fbc32a9e3c11e37b8282720235ae"
+metafile = true
+
+[[files]]
+file = "mods/spartan-shields.pw.toml"
+hash = "866baca6c0bd619c207a372afb52b4ea99dc06f435f02fdf3363ddb7eef8342e"
 metafile = true
 
 [[files]]

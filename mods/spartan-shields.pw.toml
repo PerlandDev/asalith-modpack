@@ -1,0 +1,13 @@
+name = "Spartan Shields"
+filename = "SpartanShields-1.20.1-forge-3.1.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2d1c99c2a5c6116ed17be0ac3cb223a2f46636e8"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5440763
+project-id = 252239
