@@ -1,0 +1,13 @@
+name = "Craftable Saddles"
+filename = "Craftable Saddles [1.20 All]-1.4.jar"
+side = "server"
+
+[download]
+url = "https://cdn.modrinth.com/data/8DgZF23T/versions/P58WBovf/Craftable%20Saddles%20%5B1.20%20All%5D-1.4.jar"
+hash-format = "sha512"
+hash = "c3f48a8995faea7abf34e37d36de43f06df1870558b882ee2fe03f4a82b7fe1ad901c6213fd723776e10fde7d1eca2809db088be7bc17182ef664616b9cf5554"
+
+[update]
+[update.modrinth]
+mod-id = "8DgZF23T"
+version = "P58WBovf"
