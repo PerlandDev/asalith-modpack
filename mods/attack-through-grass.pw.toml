@@ -1,0 +1,13 @@
+name = "Attack Through Grass"
+filename = "atg-2.0.3+1.20.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/OKM2WWl3/versions/vq9OP1B7/atg-2.0.3%2B1.20.1.jar"
+hash-format = "sha512"
+hash = "e2944135ece2015f3b4b6e50eac88b6e9b1aa2aa4f864306d2e7f468c49357f18725a07db1d3ee9f6a6f37b330fea8fe3937e127bb3f522bdd01a5ec4a4cfeac"
+
+[update]
+[update.modrinth]
+mod-id = "OKM2WWl3"
+version = "vq9OP1B7"
