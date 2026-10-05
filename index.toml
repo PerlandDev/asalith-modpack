@@ -36,6 +36,11 @@ hash = "49ef0b29b650084f38aac8faf1537b966f1c976029b1df48bb72a614c35a9641"
 metafile = true
 
 [[files]]
+file = "mods/attack-through-grass.pw.toml"
+hash = "54350a759cd6dbe19f481602fab2cba361376901669b119bce669d6616b7690c"
+metafile = true
+
+[[files]]
 file = "mods/auto-replant-crops.pw.toml"
 hash = "e95f490260d3f9169e18ebc4372b8ac94d9ddbec0c64b9d7fbf5ae1b6557ecc0"
 metafile = true
