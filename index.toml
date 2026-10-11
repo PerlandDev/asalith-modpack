@@ -281,11 +281,6 @@ hash = "980b4d0c94b7e59fa22f685295d666a1907024ae8fef5705164b257b4eebbece"
 metafile = true
 
 [[files]]
-file = "mods/moonlight.pw.toml"
-hash = "685d7c61f7d5e1c16e3de6f7e16e090c0355cf38e7d416b730093d4dc239d9d2"
-metafile = true
-
-[[files]]
 file = "mods/mowzies-mobs.pw.toml"
 hash = "0e6b04ea03c95a193b564aee5c67b8912c52c1de61cd2bd43222c494e26bbbe9"
 metafile = true
@@ -377,7 +372,7 @@ metafile = true
 
 [[files]]
 file = "mods/selene.pw.toml"
-hash = "b3e39831fb574d728076ef95c969e8ca578ab6a3eb499a35718dd9b71d5cdfe4"
+hash = "76c3da476419c86e63d828ceb2e502706a25c8a06cd05a3620b9a3dbb3635fa3"
 metafile = true
 
 [[files]]
