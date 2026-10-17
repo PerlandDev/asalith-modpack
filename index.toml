@@ -76,6 +76,11 @@ hash = "49f9d94df22724949d2ce1ae70b73461dfe7d92ce6ad6ceae9739cef0b34a089"
 metafile = true
 
 [[files]]
+file = "mods/butchery.pw.toml"
+hash = "ef204f1e0702eb75b3179ee28b20c426b338e893fc61685d2b075dc161ca6557"
+metafile = true
+
+[[files]]
 file = "mods/camera-mod.pw.toml"
 hash = "46807a76af96c004997bf1fd867d9d2e02a8fa1ccf20ef3bcccef0b2ecd3294b"
 metafile = true
@@ -263,6 +268,11 @@ metafile = true
 [[files]]
 file = "mods/lootr.pw.toml"
 hash = "e8b4876d403b4f4daab64bad9704a5b271a33031d1ff8d19d23ebd1e3b8dd39a"
+metafile = true
+
+[[files]]
+file = "mods/macaws-holidays.pw.toml"
+hash = "89b70edc735520b663c44075cd43df5a9a15c6fe90c0fba383b5507c5247366e"
 metafile = true
 
 [[files]]
