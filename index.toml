@@ -451,6 +451,11 @@ hash = "131c818cca79586fdca0535062a63581e7c438efd108be4403ab8faea92e6368"
 metafile = true
 
 [[files]]
+file = "mods/underground-beacons.pw.toml"
+hash = "12cc04ce8e23d124f2b8a5d0280f0b127b7d0c89ff017ae1978c5ce472078d85"
+metafile = true
+
+[[files]]
 file = "mods/waystones.pw.toml"
 hash = "ff646e2f218fe9b5094b835855949b70f3f528f0d12ce2401455f60ee9017dbb"
 metafile = true
