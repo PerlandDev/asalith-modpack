@@ -96,6 +96,11 @@ hash = "eea01c16f108225646d8d7775eed0f07545461ddcd56ec304b3f8473d89bbc18"
 metafile = true
 
 [[files]]
+file = "mods/chicken-chunks-1-8.pw.toml"
+hash = "0f79e36c3b0b299046d61c7b7d6801ed986afa4c1853882e0a85ece2243b67ba"
+metafile = true
+
+[[files]]
 file = "mods/chipped.pw.toml"
 hash = "b0732421ae2999d558a7b70a11fa86a93738ca33f6f3ec343017796df9c47d9c"
 metafile = true
@@ -113,6 +118,11 @@ metafile = true
 [[files]]
 file = "mods/cloth-config.pw.toml"
 hash = "e3dd03e7fec88831974857e2cdded54dd5c5bdcaa3f6d6248c2800e82db4dd41"
+metafile = true
+
+[[files]]
+file = "mods/codechicken-lib-1-8.pw.toml"
+hash = "a81fc8be889dfe5fc3c04cc158868f5afc33b30e538699089d084fecda9d1b04"
 metafile = true
 
 [[files]]
