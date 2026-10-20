@@ -201,6 +201,10 @@ hash = "6e9520bf3b72d3d59d831ed90730b42e1203aa32e88020d3f333a8b2f0255ceb"
 metafile = true
 
 [[files]]
+file = "mods/fridge-1.0.0-forge-1.20.1.jar"
+hash = "89919b14c8b7fa1b1cbd5e495f113216939ae6114a6226143bc48f3f4fcab80b"
+
+[[files]]
 file = "mods/fusion-connected-textures.pw.toml"
 hash = "c58c0418e8490b91b86af7fc4a57374b7d1c7592506f41a28710bbd28b96f718"
 metafile = true
@@ -458,6 +462,11 @@ metafile = true
 [[files]]
 file = "mods/waystones.pw.toml"
 hash = "ff646e2f218fe9b5094b835855949b70f3f528f0d12ce2401455f60ee9017dbb"
+metafile = true
+
+[[files]]
+file = "mods/when-dungeons-arise.pw.toml"
+hash = "0cb70caa22009a495a64a4332480b5ae80cb7fc7ba34c0a48ab8aff7df20b4f7"
 metafile = true
 
 [[files]]
