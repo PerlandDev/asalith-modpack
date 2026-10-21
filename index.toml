@@ -191,6 +191,16 @@ hash = "5ec0c37f3f4ad07a40c10376668bca80334ddb7ad2bab06eb4de8f7aac339c8e"
 metafile = true
 
 [[files]]
+file = "mods/enchanting-plus-classic.pw.toml"
+hash = "daf1b8a375de9175e08320809452ded815b6077b4cb10e269cb189769187c92e"
+metafile = true
+
+[[files]]
+file = "mods/enchantment-descriptions.pw.toml"
+hash = "e4c69a3551a4343fc76fb135266aecac0042863693f04d2c58a26c71b6e988d9"
+metafile = true
+
+[[files]]
 file = "mods/epic-knights-shields-armor-and-weapons.pw.toml"
 hash = "559efa085cac2b3a8b7a94444153b67ed0a0ac5e9ebfd901d1219b473507480a"
 metafile = true
