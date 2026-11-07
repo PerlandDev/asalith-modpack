@@ -1,0 +1,68 @@
+services:
+  asalith:
+    image: ghcr.io/perlanddev/asalith-server:test
+    ports:
+      - "${HOST_PORT:-25566}:25565"
+    volumes:
+      - asalith-test:/data
+    env_file:
+      - stack.env
+    restart: unless-stopped
+    environment:
+      - EULA=${EULA}
+      # Sustituye ${CFG_*} dentro de los ficheros de config al arrancar
+      - REPLACE_ENV_VARIABLES=TRUE
+      - REMOVE_OLD_MODS=TRUE
+      - REMOVE_OLD_MODS_DEPTH=1
+      # Versiones fijadas al pack.toml de asalith-modpack — no cambiar una sin la otra
+      - TYPE=FORGE
+      - VERSION=${MINECRAFT_VERSION:-1.20.1}
+      - FORGE_VERSION=${FORGE_VERSION:-47.4.22}
+      - PACKWIZ_URL=${PACKWIZ_URL:-https://perlanddev.github.io/asalith-modpack/pack.toml}
+      - SERVER_NAME=${MINECRAFT_SERVER_NAME:-Asalith PBE}
+      - MOTD=${MINECRAFT_MOTD:-Asalith PBE}
+      - DIFFICULTY=${MINECRAFT_DIFFICULTY:-normal}
+      - MAX_PLAYERS=${MINECRAFT_MAX_PLAYERS:-100}
+      - MAX_WORLD_SIZE=${MINECRAFT_MAX_WORLD_SIZE:-29999984}
+      - VIEW_DISTANCE=${MINECRAFT_VIEW_DISTANCE:-10}
+      - ALLOW_NETHER=${MINECRAFT_ALLOW_NETHER:-true}
+      - ANNOUNCE_PLAYER_ACHIEVEMENTS=${MINECRAFT_ANNOUNCE_PLAYER_ACHIEVEMENTS:-true}
+      - GENERATE_STRUCTURES=${MINECRAFT_GENERATE_STRUCTURES:-true}
+      - FORCE_GAMEMODE=${MINECRAFT_FORCE_GAMEMODE:-false}
+      - HARDCORE=${MINECRAFT_HARDCORE:-false}
+      - ENABLE_COMMAND_BLOCK=${MINECRAFT_ENABLE_COMMAND_BLOCK:-true}
+      - SPAWN_ANIMALS=${MINECRAFT_SPAWN_ANIMALS:-true}
+      - SPAWN_MONSTERS=${MINECRAFT_SPAWN_MONSTERS:-true}
+      - SPAWN_NPCS=${MINECRAFT_SPAWN_NPCS:-true}
+      # Acceso: no premium + lista blanca gestionada desde stack.env
+      - ONLINE_MODE=${MINECRAFT_ONLINE_MODE:-false}
+      - WHITELIST=${MINECRAFT_WHITELIST}
+      - ENFORCE_WHITELIST=${MINECRAFT_ENFORCE_WHITELIST:-true}
+      - OPS=${MINECRAFT_OPS}
+      - PLAYER_IDLE_TIMEOUT=${MINECRAFT_PLAYER_IDLE_TIMEOUT:-0}
+      - MEMORY=${RAM_ASALITH:-6G}
+      - USE_AIKAR_FLAGS=${USE_AIKAR_FLAGS:-true}
+      - ENABLE_AUTOPAUSE=${MINECRAFT_ENABLE_AUTOPAUSE:-false}
+      # RCON solo accesible dentro del contenedor (docker exec ... rcon-cli)
+      - RCON_PASSWORD=${SERVICE_PASSWORD_RCON}
+      - RESOURCE_PACK=${RESOURCEPACK_URL:-}
+    healthcheck:
+      test: ["CMD", "/usr/local/bin/mc-monitor", "status", "--host", "localhost"]
+      interval: 2s
+      timeout: 10s
+      retries: 15
+
+  mysqldb:
+    image: mysql
+    restart: unless-stopped
+    volumes:
+      - mysql-test:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${CFG_MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=${CFG_MYSQL_USER}
+      - MYSQL_PASSWORD=${CFG_MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${CFG_MYSQL_DATABASE}
+
+volumes:
+  asalith-test:
+  mysql-test:

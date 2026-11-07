@@ -1,0 +1,13 @@
+Una ayudita con los comandos :)
+
+# Levantar el servidor en local (construye la imagen automáticamente)
+docker compose -f docker-compose-local.yaml up -d --build
+
+# Solo construir la imagen local
+docker build -t asalith-server:local -f asalith-config/Dockerfile asalith-config
+
+# Consola del servidor (RCON) desde dentro del contenedor
+docker exec -i <contenedor> rcon-cli
+
+# Publicar versión de producción
+git tag v1.0.0 && git push --tags
