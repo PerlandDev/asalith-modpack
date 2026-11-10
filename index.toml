@@ -1003,6 +1003,11 @@ hash = "980b4d0c94b7e59fa22f685295d666a1907024ae8fef5705164b257b4eebbece"
 metafile = true
 
 [[files]]
+file = "mods/minevegas-casino.pw.toml"
+hash = "641f3db64180396867fb1e34dd67cd3e690c04199cbc47e89b61f8d1b7a45ce9"
+metafile = true
+
+[[files]]
 file = "mods/mowzies-mobs.pw.toml"
 hash = "0e6b04ea03c95a193b564aee5c67b8912c52c1de61cd2bd43222c494e26bbbe9"
 metafile = true

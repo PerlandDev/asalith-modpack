@@ -1,0 +1,13 @@
+name = "MineVegas Casino"
+filename = "minevegas-casino-neoforge-1.20.1-1.1.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "f3b1106ae9aaca8c8bc7fcc32af8265a77b6b94f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9458238
+project-id = 1732776
