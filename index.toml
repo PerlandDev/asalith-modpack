@@ -874,6 +874,11 @@ hash = "354515e4c9017acf24464556a4b56f3e15d0302308d09a9fe80817b05b6e4ff5"
 metafile = true
 
 [[files]]
+file = "mods/drink-beer-refill.pw.toml"
+hash = "fabc198a277ccd3265570e581a1cdd78ba3210d7ee4584b6edef15648433b0c2"
+metafile = true
+
+[[files]]
 file = "mods/embeddium.pw.toml"
 hash = "5ec0c37f3f4ad07a40c10376668bca80334ddb7ad2bab06eb4de8f7aac339c8e"
 metafile = true
