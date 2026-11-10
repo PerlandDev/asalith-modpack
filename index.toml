@@ -874,6 +874,11 @@ hash = "354515e4c9017acf24464556a4b56f3e15d0302308d09a9fe80817b05b6e4ff5"
 metafile = true
 
 [[files]]
+file = "mods/drink-beer-refill.pw.toml"
+hash = "fabc198a277ccd3265570e581a1cdd78ba3210d7ee4584b6edef15648433b0c2"
+metafile = true
+
+[[files]]
 file = "mods/embeddium.pw.toml"
 hash = "5ec0c37f3f4ad07a40c10376668bca80334ddb7ad2bab06eb4de8f7aac339c8e"
 metafile = true
@@ -1000,6 +1005,11 @@ metafile = true
 [[files]]
 file = "mods/minecraft-style-paintings.pw.toml"
 hash = "980b4d0c94b7e59fa22f685295d666a1907024ae8fef5705164b257b4eebbece"
+metafile = true
+
+[[files]]
+file = "mods/minevegas-casino.pw.toml"
+hash = "641f3db64180396867fb1e34dd67cd3e690c04199cbc47e89b61f8d1b7a45ce9"
 metafile = true
 
 [[files]]
