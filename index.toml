@@ -597,6 +597,10 @@ file = "config/stack.env.example"
 hash = "e353bc1dab5bc42a94da35dd41706bd40c444d9d8f2ec7359e858d59aba22992"
 
 [[files]]
+file = "config/supplementaries-common.toml"
+hash = "4de8ffe3073ea1afabb40f245c654764800846e2870dcec59e48bbed3838774a"
+
+[[files]]
 file = "config/tectonic.json"
 hash = "6182d9b5caace521a7429905796002e5f6c560e4a19828bfc79e057112084bfa"
 
